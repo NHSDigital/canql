@@ -163,6 +163,6 @@ class PatientTest < Minitest::Test
     parser2 = Canql::Parser.new(query2)
     message = "'dob' doesn't work as an alias of 'date of birth'\
       in a complicated query!"
-    asser_equal(parser1.meta_data, parser2.meta_data, message)
+    assert_equal(parser1.meta_data, parser2.meta_data, message)
   end
 end
