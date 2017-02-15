@@ -37,7 +37,7 @@ class AliasTest < Minitest::Test
       and wait action and unprocessed paediatric records \
       and mother born between 01/10/1990 and 10/01/1999 \
       and who died on 01/01/2016 \
-      with fields postcode and nhs number")
+      with fields postcode and nhs number"
     query2 = "first 27 male liveborn thames cases \
       expected between 20/06/2015 and 25/06/2015 \
       and born on 22/06/2015 and that died on 01/12/2015 \
@@ -46,7 +46,7 @@ class AliasTest < Minitest::Test
       and wait action and unprocessed paediatric records \
       and mother born between 01/10/1990 and 10/01/1999 \
       and who died on 01/01/2016 \
-      with fields postcode and nhs number")
+      with fields postcode and nhs number"
     parser1 = Canql::Parser.new(query1)
     parser2 = Canql::Parser.new(query2)
     message = "'dob' doesn't work as an alias of 'date of birth'\
