@@ -83,5 +83,4 @@ class ParserTest < Minitest::Test
     ]
     assert_meta_data_includes(parser, individual_queries)
   end
-
 end
