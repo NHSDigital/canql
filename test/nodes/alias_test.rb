@@ -3,26 +3,33 @@ require "test_helper"
 
 class AliasTest < Minitest::Test
   def test_dob_alias
-    assert(Canql::Parser.new("all babies with missing date of birth").valid?,
-      "That's a reference test for 'dob' alias,\
-      if this fails, something is wrong!!!")
+    query1 = "all babies with missing date of birth"
+    parser = Canql::Parser.new(query1)
+    message = "That's a reference test for 'dob' alias, if this fails,\
+               something is wrong!!!"
+    assert(parser.valid?, message)
 
-    assert(Canql::Parser.new("all babies with missing dob").valid?,
-      "'dob' should be a valid alias for 'date of birth'!")
+    query1 = "all babies with missing dob"
+    parser = Canql::Parser.new(query1)
+    message = "'dob' should be a valid alias for 'date of birth'!"
+    assert(parser.valid?, message)
 
-    assert_equal(Canql::Parser.new("all babies with missing postcode, \
-                                                 date of birth").meta_data,
-      Canql::Parser.new("all babies with missing postcode, dob").meta_data,
-      "'dob' doesn't work as an alias of 'date of birth'!")
+    query1 = "all babies with missing postcode, date of birth"
+    query2 = "all babies with missing postcode, dob"
+    parser1 = Canql::Parser.new(query1)
+    parser2 = Canql::Parser.new(query2)
+    message = "'dob' doesn't work as an alias of 'date of birth'!"
+    assert_equal(parser1.meta_data, parser2.meta_data, message)
 
-    assert(Canql::Parser.new("all babies with missing postcode, pac").meta_data \
-      != \
-      Canql::Parser.new("all babies with missing postcode, \
-                                                      date of birth").meta_data,
-      "'pac' appears to be working in the same way as 'dob' does,\
-       and 'pac' wasn't included in the grammar config!")
+    query1 = "all babies with missing postcode, date of birth"
+    query2 = "all babies with missing postcode, pac"
+    parser1 = Canql::Parser.new(query1)
+    parser2 = Canql::Parser.new(query2)
+    message = "'pac' appears to be working in the same way as 'dob' does,\
+               and 'pac' wasn't included in the grammar config!"
+    assert(parser1.meta_data != parser2.meta_data, message)
 
-    assert_equal(Canql::Parser.new("first 27 male liveborn thames cases \
+    query1 = "first 27 male liveborn thames cases \
       expected between 20/06/2015 and 25/06/2015 \
       and born on 22/06/2015 and that died on 01/12/2015 \
       with prenatal anomalies \
@@ -30,8 +37,8 @@ class AliasTest < Minitest::Test
       and wait action and unprocessed paediatric records \
       and mother born between 01/10/1990 and 10/01/1999 \
       and who died on 01/01/2016 \
-      with fields postcode and nhs number").meta_data,
-      Canql::Parser.new("first 27 male liveborn thames cases \
+      with fields postcode and nhs number")
+    query2 = "first 27 male liveborn thames cases \
       expected between 20/06/2015 and 25/06/2015 \
       and born on 22/06/2015 and that died on 01/12/2015 \
       with prenatal anomalies \
@@ -39,8 +46,11 @@ class AliasTest < Minitest::Test
       and wait action and unprocessed paediatric records \
       and mother born between 01/10/1990 and 10/01/1999 \
       and who died on 01/01/2016 \
-      with fields postcode and nhs number").meta_data,
-      "'dob' doesn't work as an alias of 'date of birth'\
-        in a complicated query!")
+      with fields postcode and nhs number")
+    parser1 = Canql::Parser.new(query1)
+    parser2 = Canql::Parser.new(query2)
+    message = "'dob' doesn't work as an alias of 'date of birth'\
+      in a complicated query!"
+    asser_equal(parser1.meta_data, parser2.meta_data, message)
   end
 end
