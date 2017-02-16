@@ -119,9 +119,10 @@ class PatientTest < Minitest::Test
 
     query1 = 'all babies with missing dob'
     parser = Canql::Parser.new(query1)
+    correct = { 'patient.fields_missing' => { 'equals' => ['birthdate'] } }
     message = '\'dob\' should be a valid alias for \'date of birth\'!'
     assert(parser.valid?, message)
-    assert_equal(parser.meta_data, {"patient.fields_missing"=>{"equals"=>["birthdate"]}}, message)
+    assert_equal(correct, parser.meta_data, message)
   end
 
   def test_dob_alias_query
@@ -154,8 +155,8 @@ class PatientTest < Minitest::Test
       with fields postcode and nhs number"
     parser1 = Canql::Parser.new(query1)
     parser2 = Canql::Parser.new(query2)
-    message1 = "parser1 is not valid!"
-    message2 = "parser2 is not valid!"
+    message1 = 'parser1 is not valid!'
+    message2 = 'parser2 is not valid!'
     message3 = "'dob' doesn't work as an alias of 'date of birth'\
       in a complicated query!"
     assert parser1.valid?, message1
