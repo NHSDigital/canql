@@ -121,27 +121,20 @@ class PatientTest < Minitest::Test
     parser = Canql::Parser.new(query1)
     message = '\'dob\' should be a valid alias for \'date of birth\'!'
     assert(parser.valid?, message)
+    assert_equal(parser.meta_data, {"patient.fields_missing"=>{"equals"=>["birthdate"]}}, message)
   end
 
-  def test_dob_alias_simple_query
+  def test_dob_alias_query
     query1 = 'all babies with missing postcode, date of birth'
     query2 = 'all babies with missing postcode, dob'
     parser1 = Canql::Parser.new(query1)
     parser2 = Canql::Parser.new(query2)
     message = '\'dob\' doesn\'t work as an alias of \'date of birth\'!'
+    assert parser1.valid?
+    assert parser2.valid?
     assert_equal(parser1.meta_data, parser2.meta_data, message)
 
-    query1 = 'all babies with missing postcode, date of birth'
-    query2 = 'all babies with missing postcode, pac'
-    parser1 = Canql::Parser.new(query1)
-    parser2 = Canql::Parser.new(query2)
-    message = "'pac' appears to be working in the same way as 'dob' does,\
-               and 'pac' wasn't included in the grammar config!"
-    assert(parser1.meta_data != parser2.meta_data, message)
-  end
-
-  def test_dob_alias_complicated_query
-    query1 = 'first 27 male liveborn thames cases \
+    query1 = "first 27 male liveborn thames cases \
       expected between 20/06/2015 and 25/06/2015 \
       and born on 22/06/2015 and that died on 01/12/2015 \
       with prenatal anomalies \
@@ -149,8 +142,8 @@ class PatientTest < Minitest::Test
       and wait action and unprocessed paediatric records \
       and mother born between 01/10/1990 and 10/01/1999 \
       and who died on 01/01/2016 \
-      with fields postcode and nhs number'
-    query2 = 'first 27 male liveborn thames cases \
+      with fields postcode and nhs number"
+    query2 = "first 27 male liveborn thames cases \
       expected between 20/06/2015 and 25/06/2015 \
       and born on 22/06/2015 and that died on 01/12/2015 \
       with prenatal anomalies \
@@ -158,11 +151,15 @@ class PatientTest < Minitest::Test
       and wait action and unprocessed paediatric records \
       and mother born between 01/10/1990 and 10/01/1999 \
       and who died on 01/01/2016 \
-      with fields postcode and nhs number'
+      with fields postcode and nhs number"
     parser1 = Canql::Parser.new(query1)
     parser2 = Canql::Parser.new(query2)
-    message = "'dob' doesn't work as an alias of 'date of birth'\
+    message1 = "parser1 is not valid!"
+    message2 = "parser2 is not valid!"
+    message3 = "'dob' doesn't work as an alias of 'date of birth'\
       in a complicated query!"
-    assert_equal(parser1.meta_data, parser2.meta_data, message)
+    assert parser1.valid?, message1
+    assert parser2.valid?, message2
+    assert_equal(parser1.meta_data, parser2.meta_data, message3)
   end
 end
