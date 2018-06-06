@@ -33,31 +33,37 @@ module Canql #:nodoc: all
 
     module AllOrNoneActionsNode
       def meta_data_item
+        subject = reverse_scan_for_marker(:subject) == 'mother' ? '.mother' : ''
         action_type = all_or_none_action_type.text_value.upcase.strip
-        { 'action.actioninitiated' => { Canql::ALL => action_type == 'AN OUTSTANDING' } }
+        { "action#{subject}.actioninitiated" => { Canql::ALL => action_type == 'AN OUTSTANDING' } }
       end
     end
 
     module ActionsNode
       def meta_data_item
-        { 'action.actioninitiated' => { Canql::EQUALS => action_type.text_value.upcase.strip } }
+        subject = reverse_scan_for_marker(:subject) == 'mother' ? '.mother' : ''
+        { "action#{subject}.actioninitiated" => {
+          Canql::EQUALS => action_type.text_value.upcase.strip
+        } }
       end
     end
 
     module ActionProviderCodeNode
       def meta_data_item
         # default to provider
+        subject = reverse_scan_for_marker(:subject) == 'mother' ? '.mother' : ''
         key = 'providercode'
-        { "action.#{key}" => { Canql::EQUALS => code.text_value.upcase } }
+        { "action#{subject}.#{key}" => { Canql::EQUALS => code.text_value.upcase } }
       end
     end
 
     module ActionProviderNameNode
       def meta_data_item
         # default to provider
+        subject = reverse_scan_for_marker(:subject) == 'mother' ? '.mother' : ''
         key = provider_type.text_value == 'cancer network' ? 'cn_ukacrname' : 'providername'
         {
-          "action.#{key}" => {
+          "action#{subject}.#{key}" => {
             Canql::BEGINS => short_desc.text_value.upcase,
             :interval => interval
           }
