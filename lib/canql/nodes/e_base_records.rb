@@ -4,13 +4,14 @@ module Canql #:nodoc: all
   module Nodes
     module EBaseRecordsNode
       def meta_data_item
+        subject = reverse_scan_for_marker(:subject) == 'mother' ? '.mother' : ''
         filter =
           if types.empty?
             { Canql::ALL => true }
           else
             { Canql::EQUALS => types.to_list }
           end
-        { 'unprocessed_records.sources' => filter }
+        { "unprocessed_records#{subject}.sources" => filter }
       end
     end
 
