@@ -35,7 +35,7 @@ module Canql
     end
 
     rule anomalies_icd_code
-      (icd_code_name / code_group)
+      (fasp_rating  / icd_code_name / code_group)
     end
 
     rule icd_code_name
@@ -44,6 +44,10 @@ module Canql
 
     rule code_group
       ('fasp plus' / 'plus' / 'fasp' / 'structural' / 'trisomy') <Nodes::Anomaly::SingleCodeGroupNode>
+    end
+
+    rule fasp_rating
+      ('fasp red and amber' / 'fasp amber and red' / 'fasp red' / 'fasp amber' / 'fasp green') <Nodes::Anomaly::SingleFaspRatingNode>
     end
   end
 end
