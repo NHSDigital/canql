@@ -23,11 +23,19 @@ module Canql #:nodoc: all
           if anomaly_screening_status_type.present?
             anomaly_hash['screening_status'] = anomaly_screening_status_type_filter
           end
-          anomaly_hash['icd_codes'] = code_filter[:icd_code] if code_filter[:icd_code].present?
-          return anomaly_hash if code_filter[:code_group].blank?
+          code_filters(anomaly_hash)
 
-          anomaly_hash['code_groups'] = code_filter[:code_group]
           anomaly_hash
+        end
+
+        def code_filters(anomaly_hash)
+          anomaly_hash['icd_codes'] = code_filter[:icd_code] if code_filter[:icd_code].present?
+          if code_filter[:code_group].present?
+            anomaly_hash['code_groups'] = code_filter[:code_group]
+          end
+          return if code_filter[:fasp_rating].blank?
+
+          anomaly_hash['fasp_rating'] = code_filter[:fasp_rating]
         end
 
         def existance_filter
@@ -49,36 +57,50 @@ module Canql #:nodoc: all
         def code_type(code)
           return :icd_code if code.respond_to?(:to_code) && code.to_code.present?
           return :code_group if code.respond_to?(:to_code_group) && code.to_code_group.present?
+          return :fasp_rating if code.respond_to?(:to_fasp_rating) && code.to_fasp_rating.present?
 
           raise 'Unable to find code type'
         end
 
         def code_value(code)
           return code.to_code if :icd_code == code_type(code)
+          return code.to_code_group if :code_group == code_type(code)
 
-          code.to_code_group
+          code.to_fasp_rating
         end
 
         def prepare_code_filters(code_array)
-          code_array[:icd_code].flatten!
-          code_array[:icd_code].delete_if(&:blank?)
-          code_array[:code_group].flatten!
-          code_array[:code_group].delete_if(&:blank?)
+          clean_code_array(code_array)
 
           code_filters = {}
           if code_array[:icd_code].any?
             code_filters[:icd_code] = { Canql::BEGINS => code_array[:icd_code] }
           end
-          return code_filters if code_array[:code_group].blank?
 
-          code_filters[:code_group] = { Canql::EQUALS => code_array[:code_group] }
+          if code_array[:code_group].any?
+            code_filters[:code_group] = { Canql::EQUALS => code_array[:code_group] }
+          end
+
+          if code_array[:fasp_rating].any?
+            code_filters[:fasp_rating] = { Canql::EQUALS => code_array[:fasp_rating] }
+          end
+
           code_filters
+        end
+
+        def clean_code_array(code_array)
+          code_array[:icd_code].flatten!
+          code_array[:icd_code].delete_if(&:blank?)
+          code_array[:code_group].flatten!
+          code_array[:code_group].delete_if(&:blank?)
+          code_array[:fasp_rating].flatten!
+          code_array[:fasp_rating].delete_if(&:blank?)
         end
 
         def code_filter
           return {} if code_data.text_value.blank?
 
-          code_arrays = { icd_code: [], code_group: [] }
+          code_arrays = { icd_code: [], code_group: [], fasp_rating: [] }
           code_arrays[code_type(code_data.first)] << code_value(code_data.first)
           code_data.rest.elements.each do |code|
             code_arrays[code_type(code)] << code_value(code)
@@ -90,8 +112,9 @@ module Canql #:nodoc: all
       module AdditionalCodeNode
         def code_type
           return :icd_code if anomalies_icd_code.respond_to?(:to_code)
+          return :code_group if anomalies_icd_code.respond_to?(:to_code_group)
 
-          :code_group
+          :fasp_rating
         end
 
         def to_code
@@ -100,6 +123,10 @@ module Canql #:nodoc: all
 
         def to_code_group
           anomalies_icd_code.to_code_group if :code_group == code_type
+        end
+
+        def to_fasp_rating
+          anomalies_icd_code.to_fasp_rating if :fasp_rating == code_type
         end
       end
 
@@ -112,6 +139,14 @@ module Canql #:nodoc: all
       module SingleCodeGroupNode
         def to_code_group
           text_value.gsub(/( )/, '_').upcase
+        end
+      end
+
+      module SingleFaspRatingNode
+        def to_fasp_rating
+          text_value.gsub(/( )/, '_').upcase.split('_AND_').map do |value|
+            value.start_with?('FASP_') ? value : "FASP_#{value}"
+          end
         end
       end
     end

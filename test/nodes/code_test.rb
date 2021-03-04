@@ -784,4 +784,49 @@ class CodeTest < Minitest::Test
                           'status' => { Canql::EQUALS => 'diagnosed' },
                           'code_groups' => { Canql::EQUALS => %w[FASP] }
   end
+
+  def test_should_filter_by_fasp_red_rating
+    parser = Canql::Parser.new('all cases with fasp red anomalies')
+    assert parser.valid?
+    assert_anomaly_count parser, 1
+    assert_anomaly_values parser, 0,
+                          'exists' => { Canql::EQUALS => true },
+                          'fasp_rating' => { Canql::EQUALS => ['FASP_RED'] }
+  end
+
+  def test_should_filter_by_fasp_amber_rating
+    parser = Canql::Parser.new('all cases with fasp amber anomalies')
+    assert parser.valid?
+    assert_anomaly_count parser, 1
+    assert_anomaly_values parser, 0,
+                          'exists' => { Canql::EQUALS => true },
+                          'fasp_rating' => { Canql::EQUALS => ['FASP_AMBER'] }
+  end
+
+  def test_should_filter_by_fasp_green_rating
+    parser = Canql::Parser.new('all cases with fasp green anomalies')
+    assert parser.valid?
+    assert_anomaly_count parser, 1
+    assert_anomaly_values parser, 0,
+                          'exists' => { Canql::EQUALS => true },
+                          'fasp_rating' => { Canql::EQUALS => ['FASP_GREEN'] }
+  end
+
+  def test_should_filter_by_fasp_red_amber_rating
+    parser = Canql::Parser.new('all cases with fasp red and amber anomalies')
+    assert parser.valid?
+    assert_anomaly_count parser, 1
+    assert_anomaly_values parser, 0,
+                          'exists' => { Canql::EQUALS => true },
+                          'fasp_rating' => { Canql::EQUALS => %w[FASP_RED FASP_AMBER] }
+  end
+
+  def test_should_filter_by_fasp_amber_red_rating
+    parser = Canql::Parser.new('all cases with fasp amber and red anomalies')
+    assert parser.valid?
+    assert_anomaly_count parser, 1
+    assert_anomaly_values parser, 0,
+                          'exists' => { Canql::EQUALS => true },
+                          'fasp_rating' => { Canql::EQUALS => %w[FASP_AMBER FASP_RED] }
+  end
 end
