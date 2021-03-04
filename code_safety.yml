@@ -26,8 +26,8 @@ file safety:
     safe_revision: 146b255b240b0efc928d39dd1b70ab221ddc3138
   CHANGELOG.md:
     comments: 
-    reviewed_by: josh.pencheon
-    safe_revision: aea0d1a480e886a63b723135c7381cdcee0d4b25
+    reviewed_by: ollietulloch
+    safe_revision: 9af6ea0bcdac493fe5f31d62b504b285658867c4
   CODE_OF_CONDUCT.md:
     comments: 
     reviewed_by: drewthorp
@@ -80,8 +80,8 @@ file safety:
   lib/canql/grammars/anomaly.treetop:
     comments: It is a known issue that this is potentially susceptible to certain
       kinds of DoS attack
-    reviewed_by: josh.pencheon
-    safe_revision: b7778ca1d536022a807420cc9fe0f1c2df7f73ef
+    reviewed_by: ollietulloch
+    safe_revision: e549c0dcafdd6004ec279bd256fae8b9964c9629
   lib/canql/grammars/batch_types.treetop:
     comments: 
     reviewed_by: josh.pencheon
@@ -141,8 +141,8 @@ file safety:
     safe_revision: 6932d590299ad4a9d2ba24b425b158c67142bf74
   lib/canql/nodes/anomaly.rb:
     comments: 
-    reviewed_by: josh.pencheon
-    safe_revision: b7778ca1d536022a807420cc9fe0f1c2df7f73ef
+    reviewed_by: ollietulloch
+    safe_revision: e549c0dcafdd6004ec279bd256fae8b9964c9629
   lib/canql/nodes/batch_types.rb:
     comments: 
     reviewed_by: josh.pencheon
@@ -193,12 +193,12 @@ file safety:
     safe_revision: 6932d590299ad4a9d2ba24b425b158c67142bf74
   lib/canql/version.rb:
     comments: 
-    reviewed_by: josh.pencheon
-    safe_revision: aea0d1a480e886a63b723135c7381cdcee0d4b25
+    reviewed_by: ollietulloch
+    safe_revision: 9af6ea0bcdac493fe5f31d62b504b285658867c4
   test/anomaly_test_helper.rb:
     comments: 
-    reviewed_by: josh.pencheon
-    safe_revision: 73a7dac17b20fcc77bcbd9d38777c8aa4d524816
+    reviewed_by: ollietulloch
+    safe_revision: e549c0dcafdd6004ec279bd256fae8b9964c9629
   test/canql_test.rb:
     comments: 
     reviewed_by: timgentry
@@ -221,8 +221,8 @@ file safety:
     safe_revision: 7490099869e368dcd5c26ded11eb90229baf4cae
   test/nodes/code_test.rb:
     comments: 
-    reviewed_by: josh.pencheon
-    safe_revision: b7778ca1d536022a807420cc9fe0f1c2df7f73ef
+    reviewed_by: ollietulloch
+    safe_revision: e549c0dcafdd6004ec279bd256fae8b9964c9629
   test/nodes/e_base_records_test.rb:
     comments: 
     reviewed_by: josh.pencheon
