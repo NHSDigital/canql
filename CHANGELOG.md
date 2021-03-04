@@ -1,4 +1,8 @@
 ## [Unreleased]
+* no relevent changes
+
+## 5.2.0 / 2021-03-04
+
 * Added new FASP anomaly RAG rating filters (#63)
 
 ## 5.1.0 / 2021-01-25
