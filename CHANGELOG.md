@@ -1,5 +1,5 @@
 ## [Unreleased]
-* no relevent changes
+* Added new FASP case RAG rating filters (#66)
 
 ## 5.2.0 / 2021-03-04
 

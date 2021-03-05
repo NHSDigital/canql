@@ -27,11 +27,11 @@ module Canql #:nodoc: all
         end
 
         def clean_category
-          return 'eurocat_red' if 'eurocat red' == category.text_value
-          return 'eurocat_amber' if 'eurocat amber' == category.text_value
-          return 'eurocat_green' if 'eurocat green' == category.text_value
-          return 'eurocat_amber_green' if 'eurocat amber and green' == category.text_value
-          return 'eurocat_red_amber' if 'eurocat red and amber' == category.text_value
+          if category.text_value.start_with?('eurocat ') || category.text_value.start_with?('fasp ')
+            filter_value = category.text_value.gsub(/( )/, '_').downcase.gsub(/(_and_)/, '_')
+            filter_value = 'fasp_red_amber' if filter_value == 'fasp_amber_red'
+            return filter_value
+          end
 
           category.text_value
         end
