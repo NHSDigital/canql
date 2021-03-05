@@ -94,6 +94,46 @@ class Patientest < Minitest::Test
     assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
   end
 
+  def test_should_filter_by_fasp_red_category
+    parser = Canql::Parser.new('all fasp red patients')
+    assert parser.valid?
+    assert_equal({ Canql::EQUALS => 'fasp_red' }, parser.meta_data['patient.category'])
+    assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
+  end
+
+  def test_should_filter_by_fasp_amber_category
+    parser = Canql::Parser.new('all fasp amber patients')
+    assert parser.valid?
+    assert_equal({ Canql::EQUALS => 'fasp_amber' }, parser.meta_data['patient.category'])
+    assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
+  end
+
+  def test_should_filter_by_fasp_green_category
+    parser = Canql::Parser.new('all fasp green patients')
+    assert parser.valid?
+    assert_equal({ Canql::EQUALS => 'fasp_green' }, parser.meta_data['patient.category'])
+    assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
+  end
+
+  def test_should_filter_by_fasp_excluded_category
+    parser = Canql::Parser.new('all fasp excluded patients')
+    assert parser.valid?
+    assert_equal({ Canql::EQUALS => 'fasp_excluded' }, parser.meta_data['patient.category'])
+    assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
+  end
+
+  def test_should_filter_by_fasp_red_and_amber_category
+    parser = Canql::Parser.new('all fasp red and amber patients')
+    assert parser.valid?
+    assert_equal({ Canql::EQUALS => 'fasp_red_amber' }, parser.meta_data['patient.category'])
+    assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
+
+    parser = Canql::Parser.new('all fasp amber and red patients')
+    assert parser.valid?
+    assert_equal({ Canql::EQUALS => 'fasp_red_amber' }, parser.meta_data['patient.category'])
+    assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
+  end
+
   def test_should_not_filter_on_specific_edd
     parser = Canql::Parser.new('all patient expected on 20/06/2015')
     refute parser.valid?
