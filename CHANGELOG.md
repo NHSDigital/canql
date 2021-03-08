@@ -1,5 +1,5 @@
 ## [Unreleased]
-* no relvent changes
+* Add 'pernding data' option to the anomaly screening status filter (#69)
 
 
 ## 5.3.0 / 2021-03-05
