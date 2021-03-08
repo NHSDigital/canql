@@ -1,6 +1,9 @@
 ## [Unreleased]
-* Add 'pending data' option to the anomaly screening status filter (#69)
+* no relevant changes
 
+## 5.4.0 / 2021-03-08
+
+* Add 'pending data' option to the anomaly screening status filter (#69)
 
 ## 5.3.0 / 2021-03-05
 
