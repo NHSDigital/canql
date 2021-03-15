@@ -1,5 +1,5 @@
 ## [Unreleased]
-* no relevant changes
+* Add HES event filter (#72)
 
 ## 5.4.0 / 2021-03-08
 
