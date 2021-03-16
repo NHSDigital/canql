@@ -1,5 +1,6 @@
 ## [Unreleased]
-* no relevant changes
+### Added
+* Add new CA Death option to the unprocessed record filter (#75)
 
 ## 5.5.0 / 2021-03-16
 ### Added

@@ -50,5 +50,11 @@ module Canql #:nodoc: all
         'umum'
       end
     end
+
+    module CADeathNode
+      def normalise
+        'ca_death'
+      end
+    end
   end
 end
