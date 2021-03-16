@@ -2,28 +2,26 @@
 * no relevant changes
 
 ## 5.5.0 / 2021-03-16
-
+### Added
 * Add HES event filter (#72)
 
 ## 5.4.0 / 2021-03-08
-
+### Added
 * Add 'pending data' option to the anomaly screening status filter (#69)
 
 ## 5.3.0 / 2021-03-05
-
+### Added
 * Added new FASP case RAG rating filters (#66)
 
 ## 5.2.0 / 2021-03-04
-
+### Added
 * Added new FASP anomaly RAG rating filters (#63)
 
 ## 5.1.0 / 2021-01-25
-
 ### Added
 * Added new filters for test acceptance requirments (#59)
 
 ## 5.0.0 / 2021-01-19
-
 ### Changed
 * Changed the values of registry to use registry name rather than codes and added new supra-region options (#54)
 
