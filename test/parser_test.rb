@@ -50,11 +50,12 @@ class ParserTest < Minitest::Test
       and delivery at addenbrookes trust \
       and postnatal tests and missing delivery postcode and date of birth \
       and qa action and unprocessed paediatric records \
+      and hes records \
       and mother born between 01/10/1990 and 10/01/1999 \
       and who died on 01/01/2016 \
       with fields sex and nhs number")
     assert parser.valid?
-    assert_equal 20, parser.meta_data.count
+    assert_equal 21, parser.meta_data.count
     individual_queries = [
       'first 27 cases',
       'first 27 babies',
@@ -94,7 +95,11 @@ class ParserTest < Minitest::Test
       'all cases with mother that died on 01/01/2016',
       'all cases who died on 01/12/2015',
       'all cases with booking at hospital RGT01',
-      'all case delivery at addenbrookes trust'
+      'all case delivery at addenbrookes trust',
+      'all cases with hes records',
+      'all cases with hes events',
+      'all babies with hes records',
+      'all babies with hes events'
     ]
     assert_meta_data_includes(parser, individual_queries)
   end
