@@ -142,9 +142,31 @@ class EBaseRecordsTest < Minitest::Test
     assert_equal({ Canql::EQUALS => ['RD_DEATH'] },
                  parser.meta_data['unprocessed_records.sources'])
 
+    parser = Canql::Parser.new('all cases with unprocessed rd death records')
+    assert parser.valid?
+    assert_equal({ Canql::EQUALS => ['RD_DEATH'] },
+                 parser.meta_data['unprocessed_records.sources'])
+
     parser = Canql::Parser.new('all cases with unprocessed rare disease death records')
     assert parser.valid?
     assert_equal({ Canql::EQUALS => ['RD_DEATH'] },
+                 parser.meta_data['unprocessed_records.sources'])
+  end
+
+  def test_should_filter_by_unprocessed_cadeath_records
+    parser = Canql::Parser.new('all cases with unprocessed cadeath records')
+    assert parser.valid?
+    assert_equal({ Canql::EQUALS => ['CA_DEATH'] },
+                 parser.meta_data['unprocessed_records.sources'])
+
+    parser = Canql::Parser.new('all cases with unprocessed ca death records')
+    assert parser.valid?
+    assert_equal({ Canql::EQUALS => ['CA_DEATH'] },
+                 parser.meta_data['unprocessed_records.sources'])
+
+    parser = Canql::Parser.new('all cases with unprocessed congenital anomaly death records')
+    assert parser.valid?
+    assert_equal({ Canql::EQUALS => ['CA_DEATH'] },
                  parser.meta_data['unprocessed_records.sources'])
   end
 
@@ -187,7 +209,7 @@ class EBaseRecordsTest < Minitest::Test
   def test_should_filter_on_ebr_processing_date_word_range
     parser = Canql::Parser.new('all cases with unprocessed records dated between today and tomorrow')
     assert parser.valid?
-    today = Date.today
+    today = 0.days.ago.to_date
     tomorrow = today + 1
     assert_equal(
       { Canql::LIMITS => [today.strftime('%Y-%m-%d'), tomorrow.strftime('%Y-%m-%d')] },
@@ -196,7 +218,7 @@ class EBaseRecordsTest < Minitest::Test
 
     parser = Canql::Parser.new('all cases with unprocessed records dated for processing between today and tomorrow')
     assert parser.valid?
-    today = Date.today
+    today = 0.days.ago.to_date
     tomorrow = today + 1
     assert_equal(
       { Canql::LIMITS => [today.strftime('%Y-%m-%d'), tomorrow.strftime('%Y-%m-%d')] },
