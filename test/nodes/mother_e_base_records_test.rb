@@ -82,6 +82,18 @@ class MotherEBaseRecordsTest < Minitest::Test
                  parser.meta_data['unprocessed_records.mother.sources'])
   end
 
+  def test_should_filter_mothers_by_unprocessed_uss_records
+    parser = Canql::Parser.new('all cases with mother with unprocessed uss records')
+    assert parser.valid?
+    assert_equal({ Canql::EQUALS => ['USS'] },
+                 parser.meta_data['unprocessed_records.mother.sources'])
+
+    parser = Canql::Parser.new('all cases with mother with unprocessed ultrasound screening records')
+    assert parser.valid?
+    assert_equal({ Canql::EQUALS => ['USS'] },
+                 parser.meta_data['unprocessed_records.mother.sources'])
+  end
+
   def test_should_filter_mothers_by_unprocessed_ucyto_records
     parser = Canql::Parser.new('all cases with mother with unprocessed ucyto records')
     assert parser.valid?
