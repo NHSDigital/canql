@@ -39,6 +39,24 @@ module Canql #:nodoc: all
       end
     end
 
+    module BiochemNode
+      def normalise
+        'biochem'
+      end
+    end
+
+    module HesNode
+      def normalise
+        'hes'
+      end
+    end
+
+    module UssNode
+      def normalise
+        'uss'
+      end
+    end
+
     module RddeathNode
       def normalise
         'rd_death'
