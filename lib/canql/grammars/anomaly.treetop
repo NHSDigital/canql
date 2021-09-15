@@ -47,7 +47,7 @@ module Canql
     end
 
     rule fasp_rating
-      ('fasp red and amber' / 'fasp amber and red' / 'fasp red' / 'fasp amber' / 'fasp green') <Nodes::Anomaly::SingleFaspRatingNode>
+      ('fasp amber and green' / 'fasp green and amber' / 'fasp red and amber' / 'fasp amber and red' / 'fasp red' / 'fasp amber' / 'fasp green') <Nodes::Anomaly::SingleFaspRatingNode>
     end
   end
 end
