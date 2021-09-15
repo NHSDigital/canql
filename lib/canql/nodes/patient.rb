@@ -30,6 +30,7 @@ module Canql #:nodoc: all
           if category.text_value.start_with?('eurocat ') || category.text_value.start_with?('fasp ')
             filter_value = category.text_value.gsub(/( )/, '_').downcase.gsub(/(_and_)/, '_')
             filter_value = 'fasp_red_amber' if filter_value == 'fasp_amber_red'
+            filter_value = 'fasp_amber_green' if filter_value == 'fasp_green_amber'
             return filter_value
           end
 
@@ -40,16 +41,16 @@ module Canql #:nodoc: all
       module FieldExists
         FIELDS = {
           'date of birth': { patient: 'birthdate', mother: 'birthdate' },
-          'dob': { patient: 'birthdate', mother: 'birthdate' },
+          dob: { patient: 'birthdate', mother: 'birthdate' },
           'date of vital status': { patient: 'dateofvitalstatus', mother: 'dateofvitalstatus' },
           'delivery postcode': { patient: 'delivery_postcode' },
           'booking postcode': { patient: 'booking_postcode' },
           'nhs number': { patient: 'nhsnumber', mother: 'nhsnumber' },
           'birth weight': { patient: 'weight' },
           'place of delivery': { patient: 'placeofdelivery' },
-          'sex': { patient: 'sex' },
-          'outcome': { patient: 'outcome' },
-          'edd': { patient: 'expecteddeliverydate' },
+          sex: { patient: 'sex' },
+          outcome: { patient: 'outcome' },
+          edd: { patient: 'expecteddeliverydate' },
           'expected delivery date': { patient: 'expecteddeliverydate' },
           'booking hospital': { patient: 'booking_hospital' },
           'screening status': { patient: 'screeningstatus' },
@@ -65,7 +66,7 @@ module Canql #:nodoc: all
             patient_field_list.text_values_for_marker(:patient_field_name), subject.to_sym
           )
           modifer = field_existance_modifier.text_value.strip
-          existance = modifer != 'missing' ? 'fields_populated' : 'fields_missing'
+          existance = modifer == 'missing' ? 'fields_missing' : 'fields_populated'
           { "#{subject}.#{existance}" => { Canql::EQUALS => field_names } }
         end
 

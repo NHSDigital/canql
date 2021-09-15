@@ -94,6 +94,13 @@ class Patientest < Minitest::Test
     assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
   end
 
+  def test_should_filter_by_fasp_category
+    parser = Canql::Parser.new('all fasp patients')
+    assert parser.valid?
+    assert_equal({ Canql::EQUALS => 'fasp' }, parser.meta_data['patient.category'])
+    assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
+  end
+
   def test_should_filter_by_fasp_red_category
     parser = Canql::Parser.new('all fasp red patients')
     assert parser.valid?
@@ -119,6 +126,23 @@ class Patientest < Minitest::Test
     parser = Canql::Parser.new('all fasp excluded patients')
     assert parser.valid?
     assert_equal({ Canql::EQUALS => 'fasp_excluded' }, parser.meta_data['patient.category'])
+    assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
+  end
+
+  def test_should_filter_by_fasp_amber_and_green_category
+    parser = Canql::Parser.new('all fasp amber and green patients')
+    assert parser.valid?
+    assert_equal({ Canql::EQUALS => 'fasp_amber_green' }, parser.meta_data['patient.category'])
+    assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
+
+    parser = Canql::Parser.new('all fasp amber and green cases')
+    assert parser.valid?
+    assert_equal({ Canql::EQUALS => 'fasp_amber_green' }, parser.meta_data['patient.category'])
+    assert_equal({ Canql::EQUALS => 'case' }, parser.meta_data['results.subject'])
+
+    parser = Canql::Parser.new('all fasp green and amber patients')
+    assert parser.valid?
+    assert_equal({ Canql::EQUALS => 'fasp_amber_green' }, parser.meta_data['patient.category'])
     assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
   end
 
