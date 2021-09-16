@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Canql #:nodoc: all
+module Canql # :nodoc: all
   module Nodes
     module BatchTypeNode
       def to_type
@@ -36,6 +36,24 @@ module Canql #:nodoc: all
     module NiptNode
       def normalise
         'nipt'
+      end
+    end
+
+    module BiochemNode
+      def normalise
+        'biochem'
+      end
+    end
+
+    module HesNode
+      def normalise
+        'hes'
+      end
+    end
+
+    module UssNode
+      def normalise
+        'uss'
       end
     end
 

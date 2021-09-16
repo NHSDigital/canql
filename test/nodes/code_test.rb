@@ -812,6 +812,24 @@ class CodeTest < Minitest::Test
                           'fasp_rating' => { Canql::EQUALS => ['FASP_GREEN'] }
   end
 
+  def test_should_filter_by_fasp_green_amber_rating
+    parser = Canql::Parser.new('all cases with fasp green and amber anomalies')
+    assert parser.valid?
+    assert_anomaly_count parser, 1
+    assert_anomaly_values parser, 0,
+                          'exists' => { Canql::EQUALS => true },
+                          'fasp_rating' => { Canql::EQUALS => %w[FASP_GREEN FASP_AMBER] }
+  end
+
+  def test_should_filter_by_fasp_amber_green_rating
+    parser = Canql::Parser.new('all cases with fasp amber and green anomalies')
+    assert parser.valid?
+    assert_anomaly_count parser, 1
+    assert_anomaly_values parser, 0,
+                          'exists' => { Canql::EQUALS => true },
+                          'fasp_rating' => { Canql::EQUALS => %w[FASP_AMBER FASP_GREEN] }
+  end
+
   def test_should_filter_by_fasp_red_amber_rating
     parser = Canql::Parser.new('all cases with fasp red and amber anomalies')
     assert parser.valid?

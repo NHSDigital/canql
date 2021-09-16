@@ -16,8 +16,9 @@ module Canql
       space category:('eurocat amber and green' /
         'eurocat red and amber' / 'eurocat red' / 'eurocat amber' /
         'eurocat green' / 'eurocat' /
-        'fasp red and amber' / 'fasp amber and red' / 'fasp red' /
-        'fasp amber' / 'fasp green' / 'fasp excluded'
+        'fasp red and amber' / 'fasp amber and red' /
+        'fasp amber and green' / 'fasp green and amber' / 'fasp red' /
+        'fasp amber' / 'fasp green' / 'fasp excluded' / 'fasp'
       ) word_break <Nodes::Patient::CategoryNode>
     end
 

@@ -1,7 +1,8 @@
 module Canql
   grammar BatchTypes
     rule batch_type
-      (paediatric / enote2 / badger / ucyto / nipt / rddeath / umum / ca_death) <Nodes::BatchTypeNode>
+      (paediatric / enote2 / badger / ucyto / nipt / rddeath /
+      umum / ca_death / biochem / hes / uss) <Nodes::BatchTypeNode>
     end
 
     rule paediatric
@@ -22,6 +23,18 @@ module Canql
 
     rule nipt
       'nipt' <Nodes::NiptNode>
+    end
+
+    rule biochem
+      'biochem' <Nodes::BiochemNode>
+    end
+
+    rule hes
+      'hes' <Nodes::HesNode>
+    end
+
+    rule uss
+      ('uss' / 'ultrasound screening' ) <Nodes::UssNode>
     end
 
     rule rddeath
