@@ -1,5 +1,5 @@
 ## [Unreleased]
-### Added
+## 5.7.0 / 2021-09-16
 * Added new 'fasp' and 'fasp amber and green' case / patient / anomaly categoryfilters (#78)
 * Added new HES, BIOCHEM and USS unprocessed record filters (#79)
 
