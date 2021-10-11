@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'test_helper'
+require 'ndr_support/ourdate'
 
 # registration action and unprocessed record tests
 class EBaseRecordsTest < Minitest::Test
