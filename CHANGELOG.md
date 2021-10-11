@@ -1,4 +1,7 @@
 ## [Unreleased]
+### Patched
+* Corrected issue where date related tests failed on some ruby version (#83)
+
 ## 5.7.0 / 2021-09-16
 * Added new 'fasp' and 'fasp amber and green' case / patient / anomaly categoryfilters (#78)
 * Added new HES, BIOCHEM and USS unprocessed record filters (#79)
