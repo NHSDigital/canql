@@ -1,4 +1,7 @@
 ## [Unreleased]
+*no unreleased changes*
+
+## 5.7.1 / 2021-10-11
 ### Patched
 * Corrected issue where date related tests failed on some ruby version (#83)
 
