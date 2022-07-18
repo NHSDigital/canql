@@ -25,6 +25,19 @@ class EBaseRecordsTest < Minitest::Test
     assert_equal({ Canql::EQUALS => 'SCR_CHECK' }, parser.meta_data['action.actioninitiated'])
   end
 
+  def test_should_filter_by_badger_search_action
+    parser = Canql::Parser.new('all cases with badger_search action')
+    assert parser.valid?
+    assert_equal({ Canql::EQUALS => 'BADGER_SEARCH' }, parser.meta_data['action.actioninitiated'])
+  end
+
+  def test_should_filter_by_badger_search_action_and_provider
+    parser = Canql::Parser.new('all cases with badger_search action at hospital RGT01')
+    assert parser.valid?
+    assert_equal({ Canql::EQUALS => 'BADGER_SEARCH' }, parser.meta_data['action.actioninitiated'])
+    assert_equal({ Canql::EQUALS => 'RGT01' }, parser.meta_data['action.providercode'])
+  end
+
   def test_should_filter_by_scr_checked_action
     parser = Canql::Parser.new('all cases with scr_checked action')
     assert parser.valid?
