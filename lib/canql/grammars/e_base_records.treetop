@@ -49,8 +49,8 @@ module Canql
     end
 
     rule accepted_action
-      'coding_clinic' / 'coding_group' / 'complete' / 'qa' / 'reg_group' /
-      'scr_checked' / 'scr_check' / 'search' / 'technical'
+      'badger_search' / 'coding_clinic' / 'coding_group' / 'complete' / 'qa' /
+      'reg_group' / 'scr_checked' / 'scr_check' / 'search' / 'technical'
     end
 
     rule all_or_none_actions

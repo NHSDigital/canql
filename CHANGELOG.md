@@ -1,5 +1,5 @@
 ## [Unreleased]
-*no unreleased changes*
+* Added new 'badger_search' registration action type filter (#86)
 
 ## 5.7.1 / 2021-10-11
 ### Patched
