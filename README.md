@@ -1,13 +1,13 @@
-# CANQL [![Build Status](https://github.com/publichealthengland/canql/workflows/Test/badge.svg)](https://github.com/publichealthengland/canql/actions?query=workflow%3Atest) [![Gem Version](https://badge.fury.io/rb/canql.svg)](https://rubygems.org/gems/canql)
+# CANQL [![Build Status](https://github.com/NHSDigital/canql/workflows/Test/badge.svg)](https://github.com/NHSDigital/canql/actions?query=workflow%3Atest) [![Gem Version](https://badge.fury.io/rb/canql.svg)](https://rubygems.org/gems/canql)
 
-Congenital Anomaly Natural Query Language (CANQL) is a [Treetop](http://treetop.rubyforge.org/)-driven Domain Specific Language (DSL) used by the Public Health England (PHE) National Congenital Anomaly and Rare Disease Registration Service (NCARDRS) to identify cohorts of cases.
+Congenital Anomaly Natural Query Language (CANQL) is a [Treetop](http://treetop.rubyforge.org/)-driven Domain Specific Language (DSL) used by the NHS Digital (NHS-D) National Congenital Anomaly and Rare Disease Registration Service (NCARDRS) to identify cohorts of cases.
 
 Used for analysis, research and day-to-day operations to empower non-technical users to write sophisticated human readable queries without the need to know or understand the underlying datastore and/or schema.
 
 CANQL is decoupled from the specifics of the NCARDRS systems by producing an intermediate representation, known as Disease Intermediate Representation (DIR). This allows us to:
 
 1. implement separate DIR adapters for different datastores (e.g. SQL and NoSQL datastores);
-2. utilize the same DIR adapters for different but over-lapping DSLs, including Tumour Natural Query Language ([TNQL](https://github.com/PublicHealthEngland/tnql)) ; and
+2. utilize the same DIR adapters for different but over-lapping DSLs, including Tumour Natural Query Language ([TNQL](https://github.com/NHSDigital/tnql)) ; and
 3. pass DIR queries to non-ruby backend systems using any simple format like JSON.
 
 ## Installation
@@ -62,7 +62,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-1. Fork it ( https://github.com/PublicHealthEngland/canql/fork )
+1. Fork it ( https://github.com/NHSDigital/canql/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
