@@ -1,5 +1,5 @@
 ## [Unreleased]
-* No unreleased changes
+* Add 'other' option to anomaly screening status filter (#90)
 
 ## 5.8.1 / 2022-12-08
 * Drop support for Ruby 2.6
