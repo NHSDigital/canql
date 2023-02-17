@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = []
 
   spec.summary       = 'Congenital Anomaly Natural Query Language'
-  spec.description   = 'Domain Specific Language for querying PHE NCARDRS datastores'
+  spec.description   = 'Domain Specific Language for querying NHS NCARDRS datastores'
   spec.homepage      = 'https://github.com/NHSDigital/canql'
   spec.license       = 'MIT'
 
