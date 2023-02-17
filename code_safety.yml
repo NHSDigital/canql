@@ -1,75 +1,87 @@
 ---
 file safety:
   ".github/CODEOWNERS":
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: a964c47962d47724afd66ba59660589fc3c8b02c
   ".github/workflows/lint.yml":
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 71f6a631758a5a38814d3eafec407e0fde30101f
   ".github/workflows/test.yml":
-    comments: 
-    reviewed_by: josh.pencheon
-    safe_revision: a3f5265f1d20a6dcb8c45ab5f09207ca7d1e255c
+    comments:
+    reviewed_by: drewthorp
+    safe_revision: bb23804bc7e1a57efd6b2bdc3b225e2251699492
   ".gitignore":
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: cbb48a04cbac04a6dce845110928f69492e152a1
   ".hound.yml":
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: 0b34688f1198eace9310f47060aa8915f5b44985
   ".rubocop.yml":
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 146b255b240b0efc928d39dd1b70ab221ddc3138
   CHANGELOG.md:
-    comments: 
-    reviewed_by: ollietulloch
-    safe_revision: ce307f20916a4866631128076b4dbfa821d9c780
+    comments:
+    reviewed_by: drewthorp
+    safe_revision: c40b4facb6f7d5dc5173345b46343c0ecc18f816
   CODE_OF_CONDUCT.md:
-    comments: 
+    comments:
     reviewed_by: drewthorp
     safe_revision: 6a666fcabe027056b1c774b2eabb3fdf686911d2
   Gemfile:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: 6932d590299ad4a9d2ba24b425b158c67142bf74
   LICENSE.txt:
-    comments: 
-    reviewed_by: timgentry
-    safe_revision: ee80c4bbd5e990d38b5fc954f4fd037177672db2
+    comments:
+    reviewed_by: drewthorp
+    safe_revision: bb23804bc7e1a57efd6b2bdc3b225e2251699492
   README.md:
-    comments: 
-    reviewed_by: josh.pencheon
-    safe_revision: 3ace8794c1c545b47898da1fbee49af8afdbf521
+    comments:
+    reviewed_by: drewthorp
+    safe_revision: bb23804bc7e1a57efd6b2bdc3b225e2251699492
   Rakefile:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: 6932d590299ad4a9d2ba24b425b158c67142bf74
   bin/console:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: d6f1ccac606735190d30c962b7681ed12aec374a
   bin/setup:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: 6a666fcabe027056b1c774b2eabb3fdf686911d2
   canql.gemspec:
-    comments: 
-    reviewed_by: josh.pencheon
-    safe_revision: 146b255b240b0efc928d39dd1b70ab221ddc3138
+    comments:
+    reviewed_by: drewthorp
+    safe_revision: c40b4facb6f7d5dc5173345b46343c0ecc18f816
+  gemfiles/Gemfile.rails60:
+    comments:
+    reviewed_by: drewthorp
+    safe_revision: bb23804bc7e1a57efd6b2bdc3b225e2251699492
+  gemfiles/Gemfile.rails61:
+    comments:
+    reviewed_by: drewthorp
+    safe_revision: bb23804bc7e1a57efd6b2bdc3b225e2251699492
+  gemfiles/Gemfile.rails70:
+    comments:
+    reviewed_by: drewthorp
+    safe_revision: bb23804bc7e1a57efd6b2bdc3b225e2251699492
   lib/canql.rb:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: 6932d590299ad4a9d2ba24b425b158c67142bf74
   lib/canql/constants.rb:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: d6f1ccac606735190d30c962b7681ed12aec374a
   lib/canql/grammars.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 3ace8794c1c545b47898da1fbee49af8afdbf521
   lib/canql/grammars/age.treetop:
@@ -80,10 +92,10 @@ file safety:
   lib/canql/grammars/anomaly.treetop:
     comments: It is a known issue that this is potentially susceptible to certain
       kinds of DoS attack
-    reviewed_by: kenny.lee
-    safe_revision: 7580eb6b1196dec1fb778ee345d2bce50ef0f7c7
+    reviewed_by: drewthorp
+    safe_revision: c40b4facb6f7d5dc5173345b46343c0ecc18f816
   lib/canql/grammars/batch_types.treetop:
-    comments: 
+    comments:
     reviewed_by: kenny.lee
     safe_revision: 5bd6ccd1951140ab01b701583af94f414188b299
   lib/canql/grammars/dates.treetop:
@@ -92,15 +104,15 @@ file safety:
     reviewed_by: timgentry
     safe_revision: 2346abb4435bf95cbe9b4d8c124123b9fefe60d6
   lib/canql/grammars/e_base_records.treetop:
-    comments: 
+    comments:
     reviewed_by: ollietulloch
     safe_revision: b7af9756bba9a1c67d05dda58c6b7446827f1a7e
   lib/canql/grammars/genetic_test.treetop:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 526dbe8a3dc3334b4174928e6f51d07e48ed9247
   lib/canql/grammars/hes_event.treetop:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 3ace8794c1c545b47898da1fbee49af8afdbf521
   lib/canql/grammars/main.treetop:
@@ -114,11 +126,11 @@ file safety:
     reviewed_by: kenny.lee
     safe_revision: a69bbd63d71d5fb2ba46d6a84589915b1120763b
   lib/canql/grammars/perinatal_hospital.treetop:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: c431b8a476b84d077e9c39a2a13c2b17a296773d
   lib/canql/grammars/provider.treetop:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: c431b8a476b84d077e9c39a2a13c2b17a296773d
   lib/canql/grammars/registry.treetop:
@@ -132,162 +144,162 @@ file safety:
     reviewed_by: timgentry
     safe_revision: c39d24bb500719971969762e94545e82866bf92f
   lib/canql/grammars/test_result_group.treetop:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 9bb663b220e76e78f3f0f48e4bc6334fe9451925
   lib/canql/nodes.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 3ace8794c1c545b47898da1fbee49af8afdbf521
   lib/canql/nodes/age.rb:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: 6932d590299ad4a9d2ba24b425b158c67142bf74
   lib/canql/nodes/anomaly.rb:
-    comments: 
+    comments:
     reviewed_by: ollietulloch
     safe_revision: e549c0dcafdd6004ec279bd256fae8b9964c9629
   lib/canql/nodes/batch_types.rb:
-    comments: 
+    comments:
     reviewed_by: kenny.lee
     safe_revision: 49d17e254a95d50dea1448ca59fd45c44937d661
   lib/canql/nodes/dates.rb:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: 6932d590299ad4a9d2ba24b425b158c67142bf74
   lib/canql/nodes/e_base_records.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 4805609963f75639e2444df8f42d2d6d65005b7c
   lib/canql/nodes/genetic_test.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 526dbe8a3dc3334b4174928e6f51d07e48ed9247
   lib/canql/nodes/hes_event.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 3ace8794c1c545b47898da1fbee49af8afdbf521
   lib/canql/nodes/main.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 3ace8794c1c545b47898da1fbee49af8afdbf521
   lib/canql/nodes/patient.rb:
-    comments: 
+    comments:
     reviewed_by: kenny.lee
     safe_revision: 49d17e254a95d50dea1448ca59fd45c44937d661
   lib/canql/nodes/perinatal_hospital.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: c431b8a476b84d077e9c39a2a13c2b17a296773d
   lib/canql/nodes/registry.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 4e26ac746098452b01dac88373e401e39f309b74
   lib/canql/nodes/test_result.rb:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: c39d24bb500719971969762e94545e82866bf92f
   lib/canql/nodes/test_result_group.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 9bb663b220e76e78f3f0f48e4bc6334fe9451925
   lib/canql/parser.rb:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: 6932d590299ad4a9d2ba24b425b158c67142bf74
   lib/canql/treetop/extensions.rb:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: 6932d590299ad4a9d2ba24b425b158c67142bf74
   lib/canql/version.rb:
-    comments: 
-    reviewed_by: ollietulloch
-    safe_revision: ce307f20916a4866631128076b4dbfa821d9c780
+    comments:
+    reviewed_by: drewthorp
+    safe_revision: 25c2a9b6586b9b1fa68ecee817385a7132150319
   test/anomaly_test_helper.rb:
-    comments: 
+    comments:
     reviewed_by: ollietulloch
     safe_revision: e549c0dcafdd6004ec279bd256fae8b9964c9629
   test/canql_test.rb:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: 6932d590299ad4a9d2ba24b425b158c67142bf74
   test/hes_event_test_helper.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 3ace8794c1c545b47898da1fbee49af8afdbf521
   test/minitest_helper.rb:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: 6932d590299ad4a9d2ba24b425b158c67142bf74
   test/nodes/anomaly_test.rb:
-    comments: 
-    reviewed_by: ollietulloch
-    safe_revision: b0b092613c94a8c2f04191dbe2a1a347c8e14d16
+    comments:
+    reviewed_by: drewthorp
+    safe_revision: c40b4facb6f7d5dc5173345b46343c0ecc18f816
   test/nodes/case_age_test.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 511e4238f83eb5b32839c25d94ec2a59145539bb
   test/nodes/case_test.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 7490099869e368dcd5c26ded11eb90229baf4cae
   test/nodes/code_test.rb:
-    comments: 
+    comments:
     reviewed_by: kenny.lee
     safe_revision: 7580eb6b1196dec1fb778ee345d2bce50ef0f7c7
   test/nodes/e_base_records_test.rb:
-    comments: 
+    comments:
     reviewed_by: ollietulloch
     safe_revision: b7af9756bba9a1c67d05dda58c6b7446827f1a7e
   test/nodes/genetic_tests_test.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 511e4238f83eb5b32839c25d94ec2a59145539bb
   test/nodes/hes_event_test.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 3ace8794c1c545b47898da1fbee49af8afdbf521
   test/nodes/main_case_test.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 511e4238f83eb5b32839c25d94ec2a59145539bb
   test/nodes/main_patient_test.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 511e4238f83eb5b32839c25d94ec2a59145539bb
   test/nodes/mother_e_base_records_test.rb:
-    comments: 
+    comments:
     reviewed_by: kenny.lee
     safe_revision: 99ef15c6610409a1562e6a03b015569d087b045f
   test/nodes/patient_age_test.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 511e4238f83eb5b32839c25d94ec2a59145539bb
   test/nodes/patient_test.rb:
-    comments: 
+    comments:
     reviewed_by: kenny.lee
     safe_revision: a69bbd63d71d5fb2ba46d6a84589915b1120763b
   test/nodes/perinatal_hospital_test.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 511e4238f83eb5b32839c25d94ec2a59145539bb
   test/nodes/registry_test.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 293248a17d087d7557a6aacdcb5bf3fbec946b87
   test/nodes/test_result_groups_test.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 9bb663b220e76e78f3f0f48e4bc6334fe9451925
   test/nodes/test_results_test.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 511e4238f83eb5b32839c25d94ec2a59145539bb
   test/parser_test.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 3ace8794c1c545b47898da1fbee49af8afdbf521
   test/test_helper.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: 42bb9bd177a761b9d04d728e53fcf0ebd0083ae4
