@@ -27,7 +27,7 @@ file safety:
   CHANGELOG.md:
     comments:
     reviewed_by: drewthorp
-    safe_revision: c40b4facb6f7d5dc5173345b46343c0ecc18f816
+    safe_revision: '08613f674ddc2592c62fabe9b0063552eb2eb75f'
   CODE_OF_CONDUCT.md:
     comments:
     reviewed_by: drewthorp
@@ -214,7 +214,7 @@ file safety:
   lib/canql/version.rb:
     comments:
     reviewed_by: drewthorp
-    safe_revision: 25c2a9b6586b9b1fa68ecee817385a7132150319
+    safe_revision: '08613f674ddc2592c62fabe9b0063552eb2eb75f'
   test/anomaly_test_helper.rb:
     comments:
     reviewed_by: ollietulloch
