@@ -1,0 +1,19 @@
+module Canql
+  grammar Events
+    rule events
+      and_keyword? existance_modifier:events_no_keyword? event_type:events_keywords event_object_keyword <Nodes::Events::WithCondition>
+    end
+
+    rule events_no_keyword
+      space ('no' / 'some') word_break
+    end
+
+    rule events_keywords
+      space ('birth' / 'death' / 'hes' / 'preg loss hes' / 'pregnancy loss hes' / 'preg loss bpas' / 'pregnancy loss bpas' / 'msds') word_break
+    end
+
+    rule event_object_keyword
+      space ('events' / 'event' / 'records' / 'record') word_break
+    end
+  end
+end

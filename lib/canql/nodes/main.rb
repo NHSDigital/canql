@@ -32,7 +32,7 @@ module Canql #:nodoc: all
         sub_clauses = build_sub_clauses
 
         %i[
-          anomalies genetic_tests test_results test_result_groups test_acceptances hes_events
+          anomalies genetic_tests test_results test_result_groups test_acceptances events
         ].each do |condition_key|
           if sub_clauses[condition_key].present?
             conditions[condition_key.to_s] = { Canql::ALL => sub_clauses[condition_key] }
@@ -52,7 +52,7 @@ module Canql #:nodoc: all
             sub_clauses, element, :test_result_groups, :to_test_result_group
           )
           add_sub_clause(sub_clauses, element, :test_acceptances, :to_test_acceptance)
-          add_sub_clause(sub_clauses, element, :hes_events, :to_hes)
+          add_sub_clause(sub_clauses, element, :events, :to_events)
         end
         sub_clauses
       end

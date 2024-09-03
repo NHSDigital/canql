@@ -36,7 +36,7 @@ def assert_array_includes(array, subset)
 end
 
 def assert_dir_block_count(parser, block_type, numder_of_blocks)
-  return true if parser.meta_data[block_type].blank? && numder_of_anomalies.zero?
+  return true if parser.meta_data[block_type].blank? && numder_of_blocks.zero?
 
   assert parser.meta_data[block_type].present?, 'No DIR blocks to count'
   assert_equal numder_of_blocks, parser.meta_data.dig(block_type, Canql::ALL).count
