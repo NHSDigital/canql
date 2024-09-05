@@ -2,20 +2,19 @@
 
 module Canql #:nodoc: all
   module Nodes
-    module Events
+    module PatientEvents
       module WithCondition
         def to_events
-          event_type = text_values_for_marker(:event_type).first.strip
-          event_relevance = text_values_for_marker(:event_relevance).first.to_s.strip
-          hash = existence_filter
-          hash['type'] = event_type_name[event_type]
-          hash['relevant'] = event_relevance_flag(event_relevance) || false
+          event_name = event_type_name()
+          { "#{event_name}_event" => existence_filter }
+        end
 
-          hash
+        def maternal_relevant_event_types
+          %w[pregnancy_loss_hes pregnancy_loss_bpas msds]
         end
 
         def event_type_name
-          {
+          map = {
             'birth' => 'birth',
             'death' => 'death',
             'hes' => 'hes',
@@ -25,10 +24,7 @@ module Canql #:nodoc: all
             'pregnancy loss bpas' => 'pregnancy_loss_bpas',
             'msds' => 'msds'
           }
-        end
-
-        def event_relevance_flag(relevance)
-          %w[linked relevant related].include?(relevance)
+          map[event_type.text_value.strip]
         end
 
         def existence_filter
