@@ -55,6 +55,7 @@ module Canql # :nodoc: all
           'booking hospital': { patient: 'booking_hospital' },
           'screening status': { patient: 'screeningstatus' },
           'number of fetuses at delivery': { patient: 'numoffetusesatdelivery' },
+          'number of fetuses in early pregnancy': { patient: 'numberoffetuses' },
           'malformed in set': { patient: 'malformedinset' },
           'gestation at delivery': { patient: 'gestationallength' },
           'booking date': { patient: 'firstbookingdate' }

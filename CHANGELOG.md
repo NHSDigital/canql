@@ -3,6 +3,7 @@
 * Changed the hes event filter to align with other new event filter
 ### Added
 * Added event filters for birth, death, pregnancy loss and MSDS
+* Added 'number of fetuses in early pregnancy' to field existence modifier
 
 ## 5.9.0 / 2023-01-17
 * Added 'other' option to anomaly screening status filter (#90)
