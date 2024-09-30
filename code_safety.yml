@@ -26,8 +26,8 @@ file safety:
     safe_revision: 146b255b240b0efc928d39dd1b70ab221ddc3138
   CHANGELOG.md:
     comments:
-    reviewed_by: drewthorp
-    safe_revision: '08613f674ddc2592c62fabe9b0063552eb2eb75f'
+    reviewed_by: kennylee
+    safe_revision: 7ee531fd06a54ebb11d78b0069141d2c3eec8d08
   CODE_OF_CONDUCT.md:
     comments:
     reviewed_by: drewthorp
@@ -82,8 +82,8 @@ file safety:
     safe_revision: d6f1ccac606735190d30c962b7681ed12aec374a
   lib/canql/grammars.rb:
     comments:
-    reviewed_by: josh.pencheon
-    safe_revision: 3ace8794c1c545b47898da1fbee49af8afdbf521
+    reviewed_by: kennylee
+    safe_revision: f75b0b0cbe0e60bab037b32ab99aaf7fb6339d3d
   lib/canql/grammars/age.treetop:
     comments: It is a known issue that this is potentially susceptible to certain
       kinds of DoS attack
@@ -105,8 +105,12 @@ file safety:
     safe_revision: 2346abb4435bf95cbe9b4d8c124123b9fefe60d6
   lib/canql/grammars/e_base_records.treetop:
     comments:
-    reviewed_by: ollietulloch
-    safe_revision: b7af9756bba9a1c67d05dda58c6b7446827f1a7e
+    reviewed_by: kennylee
+    safe_revision: f75b0b0cbe0e60bab037b32ab99aaf7fb6339d3d
+  lib/canql/grammars/events.treetop:
+    comments:
+    reviewed_by: kennylee
+    safe_revision: f75b0b0cbe0e60bab037b32ab99aaf7fb6339d3d
   lib/canql/grammars/genetic_test.treetop:
     comments:
     reviewed_by: josh.pencheon
@@ -114,13 +118,13 @@ file safety:
   lib/canql/grammars/main.treetop:
     comments: It is a known issue that this is potentially susceptible to certain
       kinds of DoS attack
-    reviewed_by: josh.pencheon
-    safe_revision: 3ace8794c1c545b47898da1fbee49af8afdbf521
+    reviewed_by: kennylee
+    safe_revision: f75b0b0cbe0e60bab037b32ab99aaf7fb6339d3d
   lib/canql/grammars/patient.treetop:
     comments: It is a known issue that this is potentially susceptible to certain
       kinds of DoS attack
-    reviewed_by: kenny.lee
-    safe_revision: a69bbd63d71d5fb2ba46d6a84589915b1120763b
+    reviewed_by: kennylee
+    safe_revision: f75b0b0cbe0e60bab037b32ab99aaf7fb6339d3d
   lib/canql/grammars/perinatal_hospital.treetop:
     comments:
     reviewed_by: josh.pencheon
@@ -145,8 +149,8 @@ file safety:
     safe_revision: 9bb663b220e76e78f3f0f48e4bc6334fe9451925
   lib/canql/nodes.rb:
     comments:
-    reviewed_by: josh.pencheon
-    safe_revision: 3ace8794c1c545b47898da1fbee49af8afdbf521
+    reviewed_by: kennylee
+    safe_revision: f75b0b0cbe0e60bab037b32ab99aaf7fb6339d3d
   lib/canql/nodes/age.rb:
     comments:
     reviewed_by: timgentry
@@ -167,18 +171,26 @@ file safety:
     comments:
     reviewed_by: josh.pencheon
     safe_revision: 4805609963f75639e2444df8f42d2d6d65005b7c
+  lib/canql/nodes/events.rb:
+    comments:
+    reviewed_by: kennylee
+    safe_revision: f75b0b0cbe0e60bab037b32ab99aaf7fb6339d3d
   lib/canql/nodes/genetic_test.rb:
     comments:
     reviewed_by: josh.pencheon
     safe_revision: 526dbe8a3dc3334b4174928e6f51d07e48ed9247
   lib/canql/nodes/main.rb:
     comments:
-    reviewed_by: josh.pencheon
-    safe_revision: 3ace8794c1c545b47898da1fbee49af8afdbf521
+    reviewed_by: kennylee
+    safe_revision: f75b0b0cbe0e60bab037b32ab99aaf7fb6339d3d
   lib/canql/nodes/patient.rb:
     comments:
-    reviewed_by: kenny.lee
-    safe_revision: 49d17e254a95d50dea1448ca59fd45c44937d661
+    reviewed_by: kennylee
+    safe_revision: f75b0b0cbe0e60bab037b32ab99aaf7fb6339d3d
+  lib/canql/nodes/patient_events.rb:
+    comments:
+    reviewed_by: kennylee
+    safe_revision: f75b0b0cbe0e60bab037b32ab99aaf7fb6339d3d
   lib/canql/nodes/perinatal_hospital.rb:
     comments:
     reviewed_by: josh.pencheon
@@ -205,8 +217,8 @@ file safety:
     safe_revision: 6932d590299ad4a9d2ba24b425b158c67142bf74
   lib/canql/version.rb:
     comments:
-    reviewed_by: drewthorp
-    safe_revision: '08613f674ddc2592c62fabe9b0063552eb2eb75f'
+    reviewed_by: kennylee
+    safe_revision: 7ee531fd06a54ebb11d78b0069141d2c3eec8d08
   test/anomaly_test_helper.rb:
     comments:
     reviewed_by: ollietulloch
@@ -215,6 +227,10 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: 6932d590299ad4a9d2ba24b425b158c67142bf74
+  test/events_test_helper.rb:
+    comments:
+    reviewed_by: kennylee
+    safe_revision: f75b0b0cbe0e60bab037b32ab99aaf7fb6339d3d
   test/minitest_helper.rb:
     comments:
     reviewed_by: timgentry
@@ -239,6 +255,10 @@ file safety:
     comments:
     reviewed_by: ollietulloch
     safe_revision: b7af9756bba9a1c67d05dda58c6b7446827f1a7e
+  test/nodes/events_test.rb:
+    comments:
+    reviewed_by: kennylee
+    safe_revision: f75b0b0cbe0e60bab037b32ab99aaf7fb6339d3d
   test/nodes/genetic_tests_test.rb:
     comments:
     reviewed_by: josh.pencheon
@@ -284,6 +304,6 @@ file safety:
     reviewed_by: josh.pencheon
     safe_revision: 3ace8794c1c545b47898da1fbee49af8afdbf521
   test/test_helper.rb:
-    comments:
-    reviewed_by: josh.pencheon
-    safe_revision: 42bb9bd177a761b9d04d728e53fcf0ebd0083ae4
+    comments: existing typo
+    reviewed_by: kennylee
+    safe_revision: f75b0b0cbe0e60bab037b32ab99aaf7fb6339d3d
