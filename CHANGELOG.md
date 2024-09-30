@@ -1,4 +1,6 @@
 ## [Unreleased]
+
+## 6.0.0 / 2024-09-30
 ### Changed
 * Changed the hes event filter to align with other new event filter
 ### Added
