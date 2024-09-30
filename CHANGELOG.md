@@ -1,4 +1,11 @@
 ## [Unreleased]
+### Changed
+* Changed the hes event filter to align with other new event filter
+### Added
+* Added event filters for birth, death, pregnancy loss and MSDS
+* Added 'number of fetuses in early pregnancy' to field existence modifier
+* Removed 'CODING_CLINIC' & 'REG_GROUP' actions from the action filter
+* Added 'BADGER_CHECKED', 'DELETE', 'FASP_CATEGORISATION', 'MSDS_SENT', 'RARE_DISEASE_TEAM', 'REG_CODING_FORUM' & 'SOURCES_CHECKED' actions to the action filter
 
 ## 5.9.0 / 2023-01-17
 * Added 'other' option to anomaly screening status filter (#90)
