@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Provides test functionaly for test on hes events CANQL clauses
+# Provides test functionality for test on events CANQL clauses
 module EventsTestHelper
   private
 
