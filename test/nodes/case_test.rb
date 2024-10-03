@@ -354,7 +354,7 @@ class CaseTest < Minitest::Test
     assert_equal(parser1.meta_data, parser2.meta_data, message3)
   end
 
-  def test_should_not_filter_for_field_existance_on_nonmother_field
+  def test_should_not_filter_for_field_existence_on_nonmother_field
     parser = Canql::Parser.new('all cases with mother with populated outcome')
     refute parser.valid?
   end

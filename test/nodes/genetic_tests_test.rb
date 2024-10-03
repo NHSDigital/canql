@@ -44,7 +44,7 @@ class GeneticTest < Minitest::Test
     assert_dir_block_values(parser, 'genetic_tests', %w[exists], index, expected)
   end
 
-  def assert_genetic_test_count(parser, numder_of_blocks)
-    assert_dir_block_count(parser, 'genetic_tests', numder_of_blocks)
+  def assert_genetic_test_count(parser, number_of_blocks)
+    assert_dir_block_count(parser, 'genetic_tests', number_of_blocks)
   end
 end

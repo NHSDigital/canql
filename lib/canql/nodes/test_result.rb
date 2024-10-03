@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Canql #:nodoc: all
+module Canql # :nodoc: all
   module Nodes
     module TestResult
       module WithCondition
@@ -9,13 +9,13 @@ module Canql #:nodoc: all
         end
 
         def to_test_result
-          test_result_hash = { 'exists' => existance_filter }
+          test_result_hash = { 'exists' => existence_filter }
           test_result_hash['type'] = test_result_type_filter if test_result_type.present?
           test_result_hash
         end
 
-        def existance_filter
-          { Canql::EQUALS => existance_modifier.text_value.strip != 'no' }
+        def existence_filter
+          { Canql::EQUALS => existence_modifier.text_value.strip != 'no' }
         end
 
         def test_result_type_filter

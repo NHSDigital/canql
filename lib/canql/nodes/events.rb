@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Canql #:nodoc: all
+module Canql # :nodoc: all
   module Nodes
     module Events
       module WithCondition
@@ -32,7 +32,7 @@ module Canql #:nodoc: all
         end
 
         def existence_filter
-          { Canql::EQUALS => existance_modifier.text_value.strip != 'no' }
+          { Canql::EQUALS => existence_modifier.text_value.strip != 'no' }
         end
       end
     end

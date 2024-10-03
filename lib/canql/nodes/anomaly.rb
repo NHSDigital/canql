@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Canql #:nodoc: all
+module Canql # :nodoc: all
   module Nodes
     module Anomaly
       module WithCondition
@@ -17,7 +17,7 @@ module Canql #:nodoc: all
         end
 
         def to_anomaly
-          anomaly_hash = { 'exists' => existance_filter }
+          anomaly_hash = { 'exists' => existence_filter }
           anomaly_hash['type'] = anomaly_type_filter if anomaly_type.present?
           anomaly_hash['status'] = anomaly_status_type_filter if anomaly_status_type.present?
           if anomaly_screening_status_type.present?
@@ -38,8 +38,8 @@ module Canql #:nodoc: all
           anomaly_hash['fasp_rating'] = code_filter[:fasp_rating]
         end
 
-        def existance_filter
-          { Canql::EQUALS => existance_modifier.text_value.strip != 'no' }
+        def existence_filter
+          { Canql::EQUALS => existence_modifier.text_value.strip != 'no' }
         end
 
         def anomaly_type_filter

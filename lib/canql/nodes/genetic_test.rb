@@ -1,16 +1,15 @@
 # frozen_string_literal: true
 
-module Canql #:nodoc: all
+module Canql # :nodoc: all
   module Nodes
     module GeneticTest
       module WithCondition
         def to_genetic_test
-          genetic_test_hash = { 'exists' => existance_filter }
-          genetic_test_hash
+          { 'exists' => existence_filter }
         end
 
-        def existance_filter
-          { Canql::EQUALS => existance_modifier.text_value.strip != 'no' }
+        def existence_filter
+          { Canql::EQUALS => existence_modifier.text_value.strip != 'no' }
         end
       end
     end

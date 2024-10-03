@@ -30,12 +30,12 @@ module Canql
       expected_keyword fuzzy_date <Nodes::Patient::ExpectedDateRangeNode>
     end
 
-    rule case_field_existance
-      and_keyword? field_existance_modifier:existance_keyword patient_field_list:case_field_list  <Nodes::Patient::FieldExists>
+    rule case_field_existence
+      and_keyword? field_existence_modifier:existence_keyword patient_field_list:case_field_list  <Nodes::Patient::FieldExists>
     end
 
-    rule patient_field_existance
-      and_keyword? field_existance_modifier:existance_keyword patient_field_list:patient_field_list  <Nodes::Patient::FieldExists>
+    rule patient_field_existence
+      and_keyword? field_existence_modifier:existence_keyword patient_field_list:patient_field_list  <Nodes::Patient::FieldExists>
     end
 
     rule patient_fields_keyword
@@ -84,7 +84,7 @@ module Canql
     end
 
     rule mother_with_conditions
-      patient_field_existance / action_or_ebr
+      patient_field_existence / action_or_ebr
     end
   end
 end
