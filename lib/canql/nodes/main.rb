@@ -2,7 +2,7 @@
 
 # require 'active_support/core_ext/object/blank'
 
-module Canql #:nodoc: all
+module Canql # :nodoc: all
   module Nodes
     module RecordCountNode
       def meta_data_item
@@ -12,7 +12,7 @@ module Canql #:nodoc: all
   end
 end
 
-module Canql #:nodoc: all
+module Canql # :nodoc: all
   module Nodes
     # Returns a filter detailing the require result type (cases or patients)
     module SubjectNode

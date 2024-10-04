@@ -30,9 +30,7 @@ module Canql # :nodoc: all
 
         def code_filters(anomaly_hash)
           anomaly_hash['icd_codes'] = code_filter[:icd_code] if code_filter[:icd_code].present?
-          if code_filter[:code_group].present?
-            anomaly_hash['code_groups'] = code_filter[:code_group]
-          end
+          anomaly_hash['code_groups'] = code_filter[:code_group] if code_filter[:code_group].present?
           return if code_filter[:fasp_rating].blank?
 
           anomaly_hash['fasp_rating'] = code_filter[:fasp_rating]
@@ -73,28 +71,20 @@ module Canql # :nodoc: all
           clean_code_array(code_array)
 
           code_filters = {}
-          if code_array[:icd_code].any?
-            code_filters[:icd_code] = { Canql::BEGINS => code_array[:icd_code] }
-          end
-
-          if code_array[:code_group].any?
-            code_filters[:code_group] = { Canql::EQUALS => code_array[:code_group] }
-          end
-
-          if code_array[:fasp_rating].any?
-            code_filters[:fasp_rating] = { Canql::EQUALS => code_array[:fasp_rating] }
-          end
+          code_filters[:icd_code] = { Canql::BEGINS => code_array[:icd_code] } if code_array[:icd_code].any?
+          code_filters[:code_group] = { Canql::EQUALS => code_array[:code_group] } if code_array[:code_group].any?
+          code_filters[:fasp_rating] = { Canql::EQUALS => code_array[:fasp_rating] } if code_array[:fasp_rating].any?
 
           code_filters
         end
 
         def clean_code_array(code_array)
           code_array[:icd_code].flatten!
-          code_array[:icd_code].delete_if(&:blank?)
+          code_array[:icd_code].compact_blank!
           code_array[:code_group].flatten!
-          code_array[:code_group].delete_if(&:blank?)
+          code_array[:code_group].compact_blank!
           code_array[:fasp_rating].flatten!
-          code_array[:fasp_rating].delete_if(&:blank?)
+          code_array[:fasp_rating].compact_blank!
         end
 
         def code_filter

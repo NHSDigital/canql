@@ -121,7 +121,7 @@ class CaseTest < Minitest::Test
   def test_should_filter_on_edd_word_range
     parser = Canql::Parser.new('all cases expected between today and tomorrow')
     assert parser.valid?
-    today = Date.today
+    today = Date.current
     tomorrow = today + 1
     assert_equal(
       { Canql::LIMITS => [today.strftime('%Y-%m-%d'), tomorrow.strftime('%Y-%m-%d')] },
