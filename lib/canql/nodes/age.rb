@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Canql #:nodoc: all
+module Canql # :nodoc: all
   module Nodes
     module Age
       module BirthDateNode

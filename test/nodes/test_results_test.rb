@@ -98,7 +98,7 @@ class TestResultsTest < Minitest::Test
     assert_dir_block_values(parser, 'test_results', %w[exists type status icd_codes], index, expected)
   end
 
-  def assert_test_result_count(parser, numder_of_blocks)
-    assert_dir_block_count(parser, 'test_results', numder_of_blocks)
+  def assert_test_result_count(parser, number_of_blocks)
+    assert_dir_block_count(parser, 'test_results', number_of_blocks)
   end
 end

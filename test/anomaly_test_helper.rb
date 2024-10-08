@@ -12,7 +12,7 @@ module AnomalyTestHelper
     )
   end
 
-  def assert_anomaly_count(parser, numder_of_blocks)
-    assert_dir_block_count(parser, 'anomalies', numder_of_blocks)
+  def assert_anomaly_count(parser, number_of_blocks)
+    assert_dir_block_count(parser, 'anomalies', number_of_blocks)
   end
 end

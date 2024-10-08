@@ -1,7 +1,7 @@
 module Canql
   grammar Events
     rule events
-      and_keyword? existance_modifier:events_no_keyword? events_name event_object_keyword <Nodes::Events::WithCondition>
+      and_keyword? existence_modifier:events_no_keyword? events_name event_object_keyword <Nodes::Events::WithCondition>
     end
 
     rule events_no_keyword

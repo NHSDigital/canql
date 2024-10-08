@@ -26,7 +26,8 @@ module Treetop
 
       def reverse_scan_for_marker(marker)
         marker_value = reverse_marker_scanner(self, marker)
-        return if marker_value.nil? || marker_value.empty?
+        return if marker_value.blank?
+
         marker_value
       end
 
@@ -34,6 +35,7 @@ module Treetop
 
       def text_values_for_marker_scanner(root, marker, list)
         return if root.elements.nil?
+
         root.elements.each do |e|
           list << e.send(marker).text_value if e.respond_to?(marker)
           text_values_for_marker_scanner(e, marker, list)
@@ -43,10 +45,9 @@ module Treetop
 
       def reverse_marker_scanner(root, marker)
         return if root.nil? || root.elements.nil?
+
         marker_value = root.send(marker).text_value if root.respond_to?(marker)
-        if marker_value.nil? || marker_value.empty?
-          marker_value = reverse_marker_scanner(root.parent, marker)
-        end
+        marker_value = reverse_marker_scanner(root.parent, marker) if marker_value.blank?
         marker_value
       end
     end

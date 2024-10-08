@@ -13,8 +13,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>true, 'type'=>'hes', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => true, 'type' => 'hes', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'case' }, parser.meta_data['results.subject'])
   end
@@ -25,8 +25,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>true, 'type'=>'hes', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => true, 'type' => 'hes', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'case' }, parser.meta_data['results.subject'])
   end
@@ -37,8 +37,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>true, 'type'=>'hes', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => true, 'type' => 'hes', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
   end
@@ -49,8 +49,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>true, 'type'=>'hes', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => true, 'type' => 'hes', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
   end
@@ -61,8 +61,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>false, 'type'=>'hes', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => false, 'type' => 'hes', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'case' }, parser.meta_data['results.subject'])
   end
@@ -73,8 +73,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>false, 'type'=>'hes', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => false, 'type' => 'hes', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'case' }, parser.meta_data['results.subject'])
   end
@@ -85,8 +85,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>false, 'type'=>'hes', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => false, 'type' => 'hes', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
   end
@@ -97,8 +97,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>false, 'type'=>'hes', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => false, 'type' => 'hes', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
   end
@@ -109,8 +109,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>true, 'type'=>'birth', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => true, 'type' => 'birth', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'case' }, parser.meta_data['results.subject'])
   end
@@ -121,8 +121,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>true, 'type'=>'birth', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => true, 'type' => 'birth', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'case' }, parser.meta_data['results.subject'])
   end
@@ -133,8 +133,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>false, 'type'=>'birth', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => false, 'type' => 'birth', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
   end
@@ -145,8 +145,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>false, 'type'=>'birth', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => false, 'type' => 'birth', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
   end
@@ -157,8 +157,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>true, 'type'=>'death', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => true, 'type' => 'death', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'case' }, parser.meta_data['results.subject'])
   end
@@ -169,8 +169,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>true, 'type'=>'death', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => true, 'type' => 'death', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'case' }, parser.meta_data['results.subject'])
   end
@@ -181,8 +181,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>false, 'type'=>'death', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => false, 'type' => 'death', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
   end
@@ -193,8 +193,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>false, 'type'=>'death', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => false, 'type' => 'death', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
   end
@@ -205,8 +205,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>true, 'type'=>'pregnancy_loss_hes', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => true, 'type' => 'pregnancy_loss_hes', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'case' }, parser.meta_data['results.subject'])
   end
@@ -217,8 +217,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>true, 'type'=>'pregnancy_loss_hes', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => true, 'type' => 'pregnancy_loss_hes', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'case' }, parser.meta_data['results.subject'])
   end
@@ -229,8 +229,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>false, 'type'=>'pregnancy_loss_hes', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => false, 'type' => 'pregnancy_loss_hes', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
   end
@@ -241,8 +241,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>false, 'type'=>'pregnancy_loss_hes', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => false, 'type' => 'pregnancy_loss_hes', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
   end
@@ -253,8 +253,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>true, 'type'=>'pregnancy_loss_bpas', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => true, 'type' => 'pregnancy_loss_bpas', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'case' }, parser.meta_data['results.subject'])
   end
@@ -265,8 +265,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>true, 'type'=>'pregnancy_loss_bpas', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => true, 'type' => 'pregnancy_loss_bpas', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'case' }, parser.meta_data['results.subject'])
   end
@@ -277,8 +277,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>false, 'type'=>'pregnancy_loss_bpas', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => false, 'type' => 'pregnancy_loss_bpas', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
   end
@@ -289,8 +289,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>false, 'type'=>'pregnancy_loss_bpas', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => false, 'type' => 'pregnancy_loss_bpas', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
   end
@@ -301,8 +301,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>true, 'type'=>'msds', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => true, 'type' => 'msds', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'case' }, parser.meta_data['results.subject'])
   end
@@ -313,8 +313,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>true, 'type'=>'msds', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => true, 'type' => 'msds', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'case' }, parser.meta_data['results.subject'])
   end
@@ -325,8 +325,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>false, 'type'=>'msds', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => false, 'type' => 'msds', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
   end
@@ -337,8 +337,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>false, 'type'=>'msds', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => false, 'type' => 'msds', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
   end
@@ -439,8 +439,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>true, 'type'=>'pregnancy_loss_hes', 'relevant'=>true}
+      %w[equals type relevant], 0,
+      { 'equals' => true, 'type' => 'pregnancy_loss_hes', 'relevant' => true }
     )
     assert_equal({ Canql::EQUALS => 'case' }, parser.meta_data['results.subject'])
   end
@@ -451,8 +451,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>true, 'type'=>'pregnancy_loss_bpas', 'relevant'=>true}
+      %w[equals type relevant], 0,
+      { 'equals' => true, 'type' => 'pregnancy_loss_bpas', 'relevant' => true }
     )
     assert_equal({ Canql::EQUALS => 'case' }, parser.meta_data['results.subject'])
   end
@@ -463,14 +463,11 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>true, 'type'=>'msds', 'relevant'=>true}
+      %w[equals type relevant], 0,
+      { 'equals' => true, 'type' => 'msds', 'relevant' => true }
     )
     assert_equal({ Canql::EQUALS => 'case' }, parser.meta_data['results.subject'])
   end
-
-
-
 
   def test_should_filter_cases_by_some_ublinked_preg_loss_hes_events
     parser = Canql::Parser.new('all cases with some unlinked pregnancy loss hes events')
@@ -478,8 +475,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>true, 'type'=>'pregnancy_loss_hes', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => true, 'type' => 'pregnancy_loss_hes', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'case' }, parser.meta_data['results.subject'])
   end
@@ -490,8 +487,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>true, 'type'=>'pregnancy_loss_bpas', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => true, 'type' => 'pregnancy_loss_bpas', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'case' }, parser.meta_data['results.subject'])
   end
@@ -502,8 +499,8 @@ class EventsTest < Minitest::Test
     assert_dir_block_count parser, 'events', 1
     assert_dir_block_values(
       parser, 'events',
-      ['equals', 'type', 'relevant']  , 0,
-      {'equals'=>true, 'type'=>'msds', 'relevant'=>false}
+      %w[equals type relevant], 0,
+      { 'equals' => true, 'type' => 'msds', 'relevant' => false }
     )
     assert_equal({ Canql::EQUALS => 'case' }, parser.meta_data['results.subject'])
   end

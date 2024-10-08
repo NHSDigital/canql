@@ -92,7 +92,7 @@ grammar Canql
      space 'and' word_break
   end
 
-  rule existance_keyword
+  rule existence_keyword
      space ('missing' / ('field' 's'?) / 'populated') word_break
   end
 
@@ -130,12 +130,12 @@ grammar Canql
 
   rule case_with_conditions
      anomalies / genetic_tests / test_results / perinatal_hospital /
-     case_field_existance / test_acceptance_existance / test_result_groups /
+     case_field_existence / test_acceptance_existence / test_result_groups /
      mother_conditions / action_or_ebr / events
   end
 
   rule patient_with_conditions
-     anomalies / genetic_tests / test_results / patient_field_existance /
+     anomalies / genetic_tests / test_results / patient_field_existence /
      action_or_ebr / events
   end
 end

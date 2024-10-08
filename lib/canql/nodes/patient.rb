@@ -66,9 +66,9 @@ module Canql # :nodoc: all
           field_names = actual_field_names(
             patient_field_list.text_values_for_marker(:patient_field_name), subject.to_sym
           )
-          modifer = field_existance_modifier.text_value.strip
-          existance = modifer == 'missing' ? 'fields_missing' : 'fields_populated'
-          { "#{subject}.#{existance}" => { Canql::EQUALS => field_names } }
+          modifier = field_existence_modifier.text_value.strip
+          existence = modifier == 'missing' ? 'fields_missing' : 'fields_populated'
+          { "#{subject}.#{existence}" => { Canql::EQUALS => field_names } }
         end
 
         def actual_field_names(fields, subject)

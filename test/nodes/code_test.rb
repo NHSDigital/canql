@@ -674,7 +674,7 @@ class CodeTest < Minitest::Test
   end
 
   def test_should_filter_with_multiple_anomaly_types
-    parser = Canql::Parser.new('all cases with suspected prenatal q2 anomalies and '\
+    parser = Canql::Parser.new('all cases with suspected prenatal q2 anomalies and ' \
                                'no confirmed postnatal q3 or q4 anomalies')
     assert parser.valid?
 
