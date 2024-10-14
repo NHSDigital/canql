@@ -8,7 +8,7 @@ module EventsTestHelper
     assert_dir_block_values(parser, "#{subject}.#{event_name}", %w[exists], index, expected)
   end
 
-  def assert_events_count(parser, subject, event_name, numder_of_blocks)
-    assert_dir_block_count(parser, "#{subject}.#{event_name}", numder_of_blocks)
+  def assert_events_count(parser, subject, event_name, number_of_blocks)
+    assert_dir_block_count(parser, "#{subject}.#{event_name}", number_of_blocks)
   end
 end

@@ -1,10 +1,10 @@
 module Canql
   grammar TestResultGroup
     rule test_result_groups
-      and_keyword? existance_modifier:test_result_group_existance_keyword group:test_result_group_names <Nodes::TestResultGroup::WithCondition>
+      and_keyword? existence_modifier:test_result_group_existence_keyword group:test_result_group_names <Nodes::TestResultGroup::WithCondition>
     end
 
-    rule test_result_group_existance_keyword
+    rule test_result_group_existence_keyword
       # If in furture the reverse is needed use 'supplied require'
       space ('missing required' / 'missing' / 'supplied required' / 'supplied') word_break
     end
@@ -13,11 +13,11 @@ module Canql
       space ('screening' / 'anomaly scan' / 'fetal medicine' / 'dating') word_break
     end
 
-    rule test_acceptance_existance
-      and_keyword? existance_modifier:test_acceptance_existance_keyword acceptance:test_acceptance_names <Nodes::TestAcceptanceExistamce::WithCondition>
+    rule test_acceptance_existence
+      and_keyword? existence_modifier:test_acceptance_existence_keyword acceptance:test_acceptance_names <Nodes::TestAcceptanceExistence::WithCondition>
     end
 
-    rule test_acceptance_existance_keyword
+    rule test_acceptance_existence_keyword
       space ('missing required' / 'missing' ) word_break
     end
 

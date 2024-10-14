@@ -35,11 +35,11 @@ def assert_array_includes(array, subset)
   assert((subset - array).empty?)
 end
 
-def assert_dir_block_count(parser, block_type, numder_of_blocks)
-  return true if parser.meta_data[block_type].blank? && numder_of_blocks.zero?
+def assert_dir_block_count(parser, block_type, number_of_blocks)
+  return true if parser.meta_data[block_type].blank? && number_of_blocks.zero?
 
   assert parser.meta_data[block_type].present?, 'No DIR blocks to count'
-  assert_equal numder_of_blocks, parser.meta_data.dig(block_type, Canql::ALL).count
+  assert_equal number_of_blocks, parser.meta_data.dig(block_type, Canql::ALL).count
 end
 
 def assert_dir_block_values(parser, block_type, all_keys = nil, index = 0, expected = {})

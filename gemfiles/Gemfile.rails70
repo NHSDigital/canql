@@ -3,3 +3,14 @@ source 'https://rubygems.org'
 gemspec path: '..'
 
 gem 'rails',  '~> 7.0.0'
+
+gem 'bundler'
+gem 'guard'
+gem 'guard-minitest'
+gem 'guard-rubocop'
+gem 'minitest', '>= 5.0.0'
+gem 'ndr_dev_support', '>= 6.0', '< 8.0'
+gem 'github-linguist'
+gem 'pry'
+gem 'rake'
+gem 'terminal-notifier-guard' if RUBY_PLATFORM =~ /darwin/

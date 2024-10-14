@@ -121,7 +121,7 @@ class CaseTest < Minitest::Test
   def test_should_filter_on_edd_word_range
     parser = Canql::Parser.new('all cases expected between today and tomorrow')
     assert parser.valid?
-    today = Date.today
+    today = Date.current
     tomorrow = today + 1
     assert_equal(
       { Canql::LIMITS => [today.strftime('%Y-%m-%d'), tomorrow.strftime('%Y-%m-%d')] },
@@ -354,7 +354,7 @@ class CaseTest < Minitest::Test
     assert_equal(parser1.meta_data, parser2.meta_data, message3)
   end
 
-  def test_should_not_filter_for_field_existance_on_nonmother_field
+  def test_should_not_filter_for_field_existence_on_nonmother_field
     parser = Canql::Parser.new('all cases with mother with populated outcome')
     refute parser.valid?
   end
