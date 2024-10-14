@@ -1,9 +1,12 @@
 ## [Unreleased]
-## Fixed
+
+## 6.0.1 / 2024-10-14
+### Fixed
 * Code only misspelling of existence
 * Code only misspelling of modifier
 * Code only misspelling of number
 * Code only misspelling of acceptance
+* Moved development dependencies to Gem files
 
 ## 6.0.0 / 2024-09-30
 ### Changed
