@@ -10,8 +10,8 @@ file safety:
     safe_revision: 71f6a631758a5a38814d3eafec407e0fde30101f
   ".github/workflows/test.yml":
     comments:
-    reviewed_by: drewthorp
-    safe_revision: bb23804bc7e1a57efd6b2bdc3b225e2251699492
+    reviewed_by: brian.shand
+    safe_revision: a5c33e94bef7e0d379e49751ec1d34e916d2f22e
   ".gitignore":
     comments:
     reviewed_by: timgentry
@@ -26,8 +26,8 @@ file safety:
     safe_revision: 146b255b240b0efc928d39dd1b70ab221ddc3138
   CHANGELOG.md:
     comments:
-    reviewed_by: kenny.lee
-    safe_revision: 5708e2f7cb8d87de5d4799a9eda01c5b5c6587c0
+    reviewed_by: brian.shand
+    safe_revision: a5c33e94bef7e0d379e49751ec1d34e916d2f22e
   CODE_OF_CONDUCT.md:
     comments:
     reviewed_by: drewthorp
@@ -58,24 +58,28 @@ file safety:
     safe_revision: 6a666fcabe027056b1c774b2eabb3fdf686911d2
   canql.gemspec:
     comments:
-    reviewed_by: kenny.lee
-    safe_revision: 366718de367121fa0d40d0fa8aaa06bdd48ed2d0
-  gemfiles/Gemfile.rails60:
-    comments:
-    reviewed_by: kenny.lee
-    safe_revision: 366718de367121fa0d40d0fa8aaa06bdd48ed2d0
-  gemfiles/Gemfile.rails61:
-    comments:
-    reviewed_by: kenny.lee
-    safe_revision: 366718de367121fa0d40d0fa8aaa06bdd48ed2d0
+    reviewed_by: brian.shand
+    safe_revision: a5c33e94bef7e0d379e49751ec1d34e916d2f22e
   gemfiles/Gemfile.rails70:
     comments:
     reviewed_by: kenny.lee
     safe_revision: 366718de367121fa0d40d0fa8aaa06bdd48ed2d0
+  gemfiles/Gemfile.rails71:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: a5c33e94bef7e0d379e49751ec1d34e916d2f22e
+  gemfiles/Gemfile.rails72:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: a5c33e94bef7e0d379e49751ec1d34e916d2f22e
+  gemfiles/Gemfile.rails80:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: a5c33e94bef7e0d379e49751ec1d34e916d2f22e
   lib/canql.rb:
     comments:
-    reviewed_by: timgentry
-    safe_revision: 6932d590299ad4a9d2ba24b425b158c67142bf74
+    reviewed_by: brian.shand
+    safe_revision: a5c33e94bef7e0d379e49751ec1d34e916d2f22e
   lib/canql/constants.rb:
     comments:
     reviewed_by: timgentry
