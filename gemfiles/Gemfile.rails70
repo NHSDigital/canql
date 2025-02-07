@@ -14,3 +14,6 @@ gem 'github-linguist'
 gem 'pry'
 gem 'rake'
 gem 'terminal-notifier-guard' if RUBY_PLATFORM =~ /darwin/
+
+# Latest concurrent-ruby breaks Rails < 7.1. See https://github.com/rails/rails/issues/54260
+gem 'concurrent-ruby', '1.3.4'
