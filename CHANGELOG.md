@@ -1,4 +1,7 @@
 ## [Unreleased]
+* no unreleased changes *
+
+## 6.0.3 / 2025-06-11
 ### Fixed
 * Restrict treetop gem dependency
 
