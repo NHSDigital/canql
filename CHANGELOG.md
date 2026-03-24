@@ -1,4 +1,7 @@
-## [Unreleased]
+## 6.1.0 / 2026-03-24
+### Changed
+* Added NCRS_CHECK and NCRS_CHECKED actions to action filter
+* Removed SCR_CHECK and SCR_CHECKED actions from action filter
 ### Fixed
 * Support Ruby 3.4. Drop support for Rails 7.0, Ruby 3.1
 
