@@ -19,7 +19,7 @@ class EBaseRecordsTest < Minitest::Test
     assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
   end
 
-  def test_should_filter_by_NCRS_check_action
+  def test_should_filter_by_ncrs_check_action
     parser = Canql::Parser.new('all cases with NCRS_check action')
     assert parser.valid?
     assert_equal({ Canql::EQUALS => 'NCRS_CHECK' }, parser.meta_data['action.actioninitiated'])
@@ -38,7 +38,7 @@ class EBaseRecordsTest < Minitest::Test
     assert_equal({ Canql::EQUALS => 'RGT01' }, parser.meta_data['action.providercode'])
   end
 
-  def test_should_filter_by_NCRS_checked_action
+  def test_should_filter_by_ncrs_checked_action
     parser = Canql::Parser.new('all cases with NCRS_checked action')
     assert parser.valid?
     assert_equal({ Canql::EQUALS => 'NCRS_CHECKED' }, parser.meta_data['action.actioninitiated'])
