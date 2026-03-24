@@ -51,7 +51,7 @@ module Canql
     rule accepted_action
       'badger_search' / 'badger_checked' / 'coding_group' / 'complete' /
       'delete' / 'fasp_categorisation' / 'msds_sent'  /
-      'ncrs_checked' / 'ncrs_check' / 
+      'ncrs_checked' / 'ncrs_check' /
       'qa' / 'rare_disease_team' / 'reg_coding_forum' /
       'search' / 'sources_checked' / 'technical'
     end
