@@ -19,10 +19,10 @@ class EBaseRecordsTest < Minitest::Test
     assert_equal({ Canql::EQUALS => 'patient' }, parser.meta_data['results.subject'])
   end
 
-  def test_should_filter_by_scr_check_action
-    parser = Canql::Parser.new('all cases with scr_check action')
+  def test_should_filter_by_ncrs_check_action
+    parser = Canql::Parser.new('all cases with NCRS_check action')
     assert parser.valid?
-    assert_equal({ Canql::EQUALS => 'SCR_CHECK' }, parser.meta_data['action.actioninitiated'])
+    assert_equal({ Canql::EQUALS => 'NCRS_CHECK' }, parser.meta_data['action.actioninitiated'])
   end
 
   def test_should_filter_by_badger_search_action
@@ -38,10 +38,10 @@ class EBaseRecordsTest < Minitest::Test
     assert_equal({ Canql::EQUALS => 'RGT01' }, parser.meta_data['action.providercode'])
   end
 
-  def test_should_filter_by_scr_checked_action
-    parser = Canql::Parser.new('all cases with scr_checked action')
+  def test_should_filter_by_ncrs_checked_action
+    parser = Canql::Parser.new('all cases with NCRS_checked action')
     assert parser.valid?
-    assert_equal({ Canql::EQUALS => 'SCR_CHECKED' }, parser.meta_data['action.actioninitiated'])
+    assert_equal({ Canql::EQUALS => 'NCRS_CHECKED' }, parser.meta_data['action.actioninitiated'])
   end
 
   def test_should_filter_by_action_hosital_code
