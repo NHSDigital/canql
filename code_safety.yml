@@ -6,12 +6,12 @@ file safety:
     safe_revision: a964c47962d47724afd66ba59660589fc3c8b02c
   ".github/workflows/lint.yml":
     comments:
-    reviewed_by: josh.pencheon
-    safe_revision: 71f6a631758a5a38814d3eafec407e0fde30101f
+    reviewed_by: rosaliemorgan
+    safe_revision: baf548addbcdb6c5ee7e1bd7c2944232d6ccc588
   ".github/workflows/test.yml":
     comments:
-    reviewed_by: brian.shand
-    safe_revision: a5c33e94bef7e0d379e49751ec1d34e916d2f22e
+    reviewed_by: rosaliemorgan
+    safe_revision: baf548addbcdb6c5ee7e1bd7c2944232d6ccc588
   ".gitignore":
     comments:
     reviewed_by: timgentry
@@ -58,12 +58,8 @@ file safety:
     safe_revision: 6a666fcabe027056b1c774b2eabb3fdf686911d2
   canql.gemspec:
     comments:
-    reviewed_by: brian.shand
-    safe_revision: a5c33e94bef7e0d379e49751ec1d34e916d2f22e
-  gemfiles/Gemfile.rails70:
-    comments:
-    reviewed_by: kenny.lee
-    safe_revision: 366718de367121fa0d40d0fa8aaa06bdd48ed2d0
+    reviewed_by: rosaliemorgan
+    safe_revision: baf548addbcdb6c5ee7e1bd7c2944232d6ccc588
   gemfiles/Gemfile.rails71:
     comments:
     reviewed_by: brian.shand
@@ -109,8 +105,8 @@ file safety:
     safe_revision: 2346abb4435bf95cbe9b4d8c124123b9fefe60d6
   lib/canql/grammars/e_base_records.treetop:
     comments:
-    reviewed_by: kennylee
-    safe_revision: f75b0b0cbe0e60bab037b32ab99aaf7fb6339d3d
+    reviewed_by: rosaliemorgan
+    safe_revision: 5fec14f5ab5b2801daf1a5ae4bf5276dad646337
   lib/canql/grammars/events.treetop:
     comments:
     reviewed_by: kenny.lee
@@ -221,8 +217,8 @@ file safety:
     safe_revision: 366718de367121fa0d40d0fa8aaa06bdd48ed2d0
   lib/canql/version.rb:
     comments:
-    reviewed_by: kenny.lee
-    safe_revision: 5708e2f7cb8d87de5d4799a9eda01c5b5c6587c0
+    reviewed_by: rosaliemorgan
+    safe_revision: 9934207bc2e62211d858af6ff4e0fa61d662a768
   test/anomaly_test_helper.rb:
     comments:
     reviewed_by: kenny.lee
@@ -257,8 +253,8 @@ file safety:
     safe_revision: 366718de367121fa0d40d0fa8aaa06bdd48ed2d0
   test/nodes/e_base_records_test.rb:
     comments:
-    reviewed_by: ollietulloch
-    safe_revision: b7af9756bba9a1c67d05dda58c6b7446827f1a7e
+    reviewed_by: rosaliemorgan
+    safe_revision: b299f070bf6aab1c3f518009021dfe6038a4a124
   test/nodes/events_test.rb:
     comments:
     reviewed_by: kenny.lee
