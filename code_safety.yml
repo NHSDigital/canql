@@ -26,8 +26,8 @@ file safety:
     safe_revision: 146b255b240b0efc928d39dd1b70ab221ddc3138
   CHANGELOG.md:
     comments:
-    reviewed_by: brian.shand
-    safe_revision: a5c33e94bef7e0d379e49751ec1d34e916d2f22e
+    reviewed_by: rosaliemorgan
+    safe_revision: 9934207bc2e62211d858af6ff4e0fa61d662a768
   CODE_OF_CONDUCT.md:
     comments:
     reviewed_by: drewthorp
