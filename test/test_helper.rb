@@ -4,7 +4,6 @@ $LOAD_PATH.unshift File.expand_path('../../lib', __dir__)
 require 'canql'
 
 require 'minitest/autorun'
-require 'minitest/unit'
 
 # Override the default Date#to_s format to ensure the formmating is right
 Date::DATE_FORMATS[:default] = '%d.%m.%Y'
