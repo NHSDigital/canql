@@ -222,6 +222,20 @@ class EBaseRecordsTest < Minitest::Test
                  parser.meta_data['unprocessed_records.sources'])
   end
 
+  def test_should_filter_by_unprocessed_antenatal_records
+    parser = Canql::Parser.new('all cases with unprocessed antenatal records')
+    assert parser.valid?
+    assert_equal({ Canql::EQUALS => ['ANTENATAL'] },
+                 parser.meta_data['unprocessed_records.sources'])
+  end
+
+  def test_should_filter_by_unprocessed_postnatal_records
+    parser = Canql::Parser.new('all cases with unprocessed postnatal records')
+    assert parser.valid?
+    assert_equal({ Canql::EQUALS => ['POSTNATAL'] },
+                 parser.meta_data['unprocessed_records.sources'])
+  end
+
   def test_should_filter_on_ebr_specific_processing_date
     parser = Canql::Parser.new('all cases with unprocessed records dated on 20/06/2015')
     assert parser.valid?
