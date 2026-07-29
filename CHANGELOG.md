@@ -1,6 +1,8 @@
 ## [Unreleased]
 ### Fixed
 * Support Ruby 4.0, Rails 8.1. Drop support for Ruby 3.2
+### Added
+* Added support for antenatal and postnatal batch types
 
 ## 6.1.0 / 2026-03-24
 ### Changed
