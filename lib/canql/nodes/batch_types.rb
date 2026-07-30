@@ -74,5 +74,17 @@ module Canql # :nodoc: all
         'ca_death'
       end
     end
+
+    module AntenatalNode
+      def normalise
+        'antenatal'
+      end
+    end
+
+    module PostnatalNode
+      def normalise
+        'postnatal'
+      end
+    end
   end
 end

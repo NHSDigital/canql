@@ -2,7 +2,7 @@ module Canql
   grammar BatchTypes
     rule batch_type
       (paediatric / enote2 / badger / ucyto / nipt / rddeath /
-      umum / ca_death / biochem / hes / uss) <Nodes::BatchTypeNode>
+      umum / ca_death / biochem / hes / uss / antenatal / postnatal) <Nodes::BatchTypeNode>
     end
 
     rule paediatric
@@ -47,6 +47,14 @@ module Canql
 
     rule ca_death
      ('cadeath' / 'ca death' / 'congenital anomaly death') <Nodes::CADeathNode>
+    end
+
+    rule antenatal
+      'antenatal' <Nodes::AntenatalNode>
+    end
+
+    rule postnatal
+      'postnatal' <Nodes::PostnatalNode>
     end
   end
 end
