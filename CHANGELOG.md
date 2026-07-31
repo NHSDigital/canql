@@ -1,4 +1,5 @@
 ## [Unreleased]
+## 7.0.0 / 2026-07-31
 ### Fixed
 * Support Ruby 4.0, Rails 8.1. Drop support for Ruby 3.2
 ### Added
