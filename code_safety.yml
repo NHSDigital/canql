@@ -31,7 +31,7 @@ file safety:
   CHANGELOG.md:
     comments:
     reviewed_by: kenny.lee
-    safe_revision: 6cc3b48a882e28d69588d971e4caf454a85b86e1
+    safe_revision: a2e939a6c58af756f9c63fe6bee332ec212acbcd
   CODE_OF_CONDUCT.md:
     comments:
     reviewed_by: drewthorp
