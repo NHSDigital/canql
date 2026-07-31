@@ -4,14 +4,18 @@ file safety:
     comments:
     reviewed_by: josh.pencheon
     safe_revision: a964c47962d47724afd66ba59660589fc3c8b02c
+  ".github/dependabot.yml":
+    comments:
+    reviewed_by: kenny.lee
+    safe_revision: b97beec963b92de57234c7bbdec20ea5f037cafb
   ".github/workflows/lint.yml":
     comments:
-    reviewed_by: rosaliemorgan
-    safe_revision: baf548addbcdb6c5ee7e1bd7c2944232d6ccc588
+    reviewed_by: kenny.lee
+    safe_revision: f76e4bb657796f9fa093ed80d0aa3718e8dbd83f
   ".github/workflows/test.yml":
     comments:
-    reviewed_by: rosaliemorgan
-    safe_revision: baf548addbcdb6c5ee7e1bd7c2944232d6ccc588
+    reviewed_by: kenny.lee
+    safe_revision: f76e4bb657796f9fa093ed80d0aa3718e8dbd83f
   ".gitignore":
     comments:
     reviewed_by: timgentry
@@ -26,8 +30,8 @@ file safety:
     safe_revision: 146b255b240b0efc928d39dd1b70ab221ddc3138
   CHANGELOG.md:
     comments:
-    reviewed_by: rosaliemorgan
-    safe_revision: 9934207bc2e62211d858af6ff4e0fa61d662a768
+    reviewed_by: kenny.lee
+    safe_revision: 6cc3b48a882e28d69588d971e4caf454a85b86e1
   CODE_OF_CONDUCT.md:
     comments:
     reviewed_by: drewthorp
@@ -48,6 +52,10 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: 6932d590299ad4a9d2ba24b425b158c67142bf74
+  SECURITY.md:
+    comments:
+    reviewed_by: kenny.lee
+    safe_revision: b97beec963b92de57234c7bbdec20ea5f037cafb
   bin/console:
     comments:
     reviewed_by: timgentry
@@ -58,8 +66,8 @@ file safety:
     safe_revision: 6a666fcabe027056b1c774b2eabb3fdf686911d2
   canql.gemspec:
     comments:
-    reviewed_by: rosaliemorgan
-    safe_revision: baf548addbcdb6c5ee7e1bd7c2944232d6ccc588
+    reviewed_by: kenny.lee
+    safe_revision: f76e4bb657796f9fa093ed80d0aa3718e8dbd83f
   gemfiles/Gemfile.rails71:
     comments:
     reviewed_by: brian.shand
@@ -72,6 +80,10 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: a5c33e94bef7e0d379e49751ec1d34e916d2f22e
+  gemfiles/Gemfile.rails81:
+    comments:
+    reviewed_by: kenny.lee
+    safe_revision: f76e4bb657796f9fa093ed80d0aa3718e8dbd83f
   lib/canql.rb:
     comments:
     reviewed_by: brian.shand
@@ -97,7 +109,7 @@ file safety:
   lib/canql/grammars/batch_types.treetop:
     comments:
     reviewed_by: kenny.lee
-    safe_revision: 5bd6ccd1951140ab01b701583af94f414188b299
+    safe_revision: 6cc3b48a882e28d69588d971e4caf454a85b86e1
   lib/canql/grammars/dates.treetop:
     comments: It is a known issue that this is potentially susceptible to certain
       kinds of DoS attack
@@ -162,7 +174,7 @@ file safety:
   lib/canql/nodes/batch_types.rb:
     comments:
     reviewed_by: kenny.lee
-    safe_revision: 49d17e254a95d50dea1448ca59fd45c44937d661
+    safe_revision: 6cc3b48a882e28d69588d971e4caf454a85b86e1
   lib/canql/nodes/dates.rb:
     comments:
     reviewed_by: kenny.lee
@@ -217,8 +229,8 @@ file safety:
     safe_revision: 366718de367121fa0d40d0fa8aaa06bdd48ed2d0
   lib/canql/version.rb:
     comments:
-    reviewed_by: rosaliemorgan
-    safe_revision: 9934207bc2e62211d858af6ff4e0fa61d662a768
+    reviewed_by: kenny.lee
+    safe_revision: 6cc3b48a882e28d69588d971e4caf454a85b86e1
   test/anomaly_test_helper.rb:
     comments:
     reviewed_by: kenny.lee
@@ -253,8 +265,8 @@ file safety:
     safe_revision: 366718de367121fa0d40d0fa8aaa06bdd48ed2d0
   test/nodes/e_base_records_test.rb:
     comments:
-    reviewed_by: rosaliemorgan
-    safe_revision: b299f070bf6aab1c3f518009021dfe6038a4a124
+    reviewed_by: kenny.lee
+    safe_revision: 6cc3b48a882e28d69588d971e4caf454a85b86e1
   test/nodes/events_test.rb:
     comments:
     reviewed_by: kenny.lee
@@ -306,4 +318,4 @@ file safety:
   test/test_helper.rb:
     comments: existing typo
     reviewed_by: kenny.lee
-    safe_revision: 366718de367121fa0d40d0fa8aaa06bdd48ed2d0
+    safe_revision: f76e4bb657796f9fa093ed80d0aa3718e8dbd83f
